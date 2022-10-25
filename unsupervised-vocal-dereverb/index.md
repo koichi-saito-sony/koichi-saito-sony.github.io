@@ -14,5 +14,5 @@ Audio samples are [here](./audio_samples.md).
 
 # Network architecture
 
-Detail explanations of the network detail are [here](./network.md)
+Detail explanations of the network architecture are [here](./network.md)
 
