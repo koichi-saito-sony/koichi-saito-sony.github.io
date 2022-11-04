@@ -13,6 +13,3 @@ Audio samples are [here](./audio_samples.md).
 # Network architecture
 
 Detail explanations of the network architecture are [here](./network.md)
-
-# Contanct
-If 

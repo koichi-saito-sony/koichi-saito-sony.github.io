@@ -3,79 +3,96 @@ title: Audio samples
 ---
 # Audio samples
 
-Reverb conversion (RC) [1] and Music enhancement (ME)[^1] [2] are trained with the paris of wet and dry vocals.
+Reverb conversion (RC) [1] and Music enhancement (ME)[2] are trained with the paris of wet and dry vocals.
 Weighted prediction error (WPE) [3], **Proposed**, and **Proposed+** are unsupervised method.
-Pre-trained model of proposed methods is trained with only dry vocals.
+The pre-trained model of proposed methods is only trained with the dry vocals.
 <table align="center"  style="text-align: center;">
   <thead>
     <tr>
       <th style="text-align: center;">Methods</th>
       <th style="text-align: center;">Manner</th>
-      <th style="text-align: center;">Sample 1</th>
-      <th style="text-align: center;">Sample 2</th>
-      <th style="text-align: center;">Sample 3</th>
+      <th style="text-align: center;">Sample 1 w/ short reverb</th>
+      <th style="text-align: center;">Sample 1 w/ long reverb</th>
+      <th style="text-align: center;">Sample 2 w/ short reverb</th>
+      <th style="text-align: center;">Sample 2 w/ long reverb</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Wet</td>
+      <td>Wet (Unprocessed)</td>
       <td>-</td>
       <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/ADIZ_09_10_idx_3.wav"></audio></td>
+            <source src="audio/Wet/Vo_008_rev04.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/audio_008_vocals_dry.mp3"></audio></td>
+            <source src="audio/Wet/Vo_008_rev02.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/ADIZ_09_10_idx_3.wav"></audio></td>
+            <source src="audio/Wet/Vo_018_rev00.wav"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/Wet/Vo_018_rev02.wav"></audio></td>
     </tr>
     <tr>
       <th style="text-align: center;"><a href="https://arxiv.org/abs/2103.02147">RC [1]</a></th>
       <td>Supervised</td>
       <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/ADIZ_09_10_idx_3.wav"></audio></td>
+            <source src="audio/RC/RC_Vo_008_rev04.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/audio_008_vocals_dry.mp3"></audio></td>
+            <source src="audio/RC/RC_Vo_008_rev02.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/ADIZ_09_10_idx_3.wav"></audio></td>
+            <source src="audio/RC/RC_Vo_018_rev00.wav"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/RC/RC_Vo_018_rev02.wav"></audio></td>
     </tr>
     <tr>
       <th style="text-align: center;"><a href="https://arxiv.org/abs/2204.13289">ME [2]</a></th>
       <td>Supervised</td>
       <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/ADIZ_09_10_idx_3.wav"></audio></td>
+            <source src="audio/ME/ME_Vo_008_rev04.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/audio_008_vocals_dry.mp3"></audio></td>
+            <source src="audio/ME/ME_Vo_008_rev02.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/ADIZ_09_10_idx_3.wav"></audio></td>
+            <source src="audio/ME/ME_Vo_018_rev00.wav"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/ME/ME_Vo_018_rev02.wav"></audio></td>
     </tr>
     <tr>
       <th style="text-align: center;"><a href="https://ieeexplore.ieee.org/document/5547558">WPE [3]</a></th>
       <td>Unsupervised</td>
       <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/ADIZ_09_10_idx_3.wav"></audio></td>
+            <source src="audio/WPE/WPE_Vo_008_rev04.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/audio_008_vocals_dry.mp3"></audio></td>
+            <source src="audio/WPE/WPE_Vo_008_rev02.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/ADIZ_09_10_idx_3.wav"></audio></td>
+            <source src="audio/WPE/WPE_Vo_018_rev00.wav"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/WPE/WPE_Vo_018_rev02.wav"></audio></td>
     </tr>
     <tr>
       <th style="text-align: center;">Proposed</th>
       <td>Unsupervised</td>
       <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/ADIZ_09_10_idx_3.wav"></audio></td>
+            <source src="audio/Proposed/Proposed_Vo_008_rev04.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/audio_008_vocals_dry.mp3"></audio></td>
+            <source src="audio/Proposed/Proposed_Vo_008_rev02.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/ADIZ_09_10_idx_3.wav"></audio></td>
+            <source src="audio/Proposed/Proposed_Vo_018_rev00.wav"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/Proposed/Proposed_Vo_018_rev02.wav"></audio></td>
     </tr>
     <tr>
       <th style="text-align: center;">Proposed+</th>
       <td>Unsupervised</td>
+      <td>coming soon</td>
+      <td>coming soon</td>
+      <td>coming soon</td>
+      <td>coming soon</td>
+      <!-- <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/Proposed+/Proposed+_Vo_008_rev04.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/ADIZ_09_10_idx_3.wav"></audio></td>
+            <source src="audio/Proposed+/Proposed+_Vo_008_rev02.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/audio_008_vocals_dry.mp3"></audio></td>
+            <source src="audio/Proposed+/Proposed+_Vo_018_rev00.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/ADIZ_09_10_idx_3.wav"></audio></td>
+            <source src="audio/Proposed+/Proposed+_Vo_018_rev02.wav"></audio></td> -->
     </tr>
   </tbody>
 </table>    
