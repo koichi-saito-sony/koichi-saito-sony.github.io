@@ -6,6 +6,7 @@ title: Audio samples
 Reverb conversion (RC) [1] and Music enhancement (ME)[^1] [2] are trained with the paris of wet and dry vocals.
 Weighted prediction error (WPE) [3], **Proposed**, and **Proposed+** are unsupervised method.
 Pre-trained model of proposed methods is trained with only dry vocals.
+
 |Methods|Manner|Sample 1|Sample 2|Sample 3|
 |:--:|:--:|:--:|:--:|:--:|
 |Wet| - |b |c||
