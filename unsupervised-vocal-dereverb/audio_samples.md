@@ -9,7 +9,7 @@ Pre-trained model of proposed methods is trained with only dry vocals.
 
 |Methods|Manner|Sample 1|Sample 2|Sample 3|
 |:--:|:--:|:--:|:--:|:--:|
-|Wet| - |<audio controls="controls"><source src="audio/audio_008_vocals_dry.mp3" type="audio/mp3" /></audio> <br />|c||
+|Wet| - |<audio controls="controls"><source src="audio/audio_008_vocals_dry.mp3" type="audio/mp3" /></audio> <br/>|<audio controls="controls"><source src="audio/audio_008_vocals_dry.mp3" type="audio/mp3" /></audio> <br/>|<audio controls="controls"><source src="audio/audio_008_vocals_dry.mp3" type="audio/mp3" /></audio> <br/>|
 |RC [1]| Supervised|b|c||
 |ME [2]| Supervised|b|c||
 |WPE [3]| Unsupervised|b|c||
