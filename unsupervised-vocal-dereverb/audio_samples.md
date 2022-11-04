@@ -29,7 +29,7 @@ Pre-trained model of proposed methods is trained with only dry vocals.
     </tr>
     <tr>
       <th style="text-align: center;"><a href="https://arxiv.org/abs/2103.02147">RC [1]</a></th>
-      <td>-</td>
+      <td>Supervised</td>
       <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/ADIZ_09_10_idx_3.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
@@ -39,7 +39,7 @@ Pre-trained model of proposed methods is trained with only dry vocals.
     </tr>
     <tr>
       <th style="text-align: center;"><a href="https://arxiv.org/abs/2204.13289">ME [2]</a></th>
-      <td>-</td>
+      <td>Supervised</td>
       <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/ADIZ_09_10_idx_3.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
@@ -49,7 +49,7 @@ Pre-trained model of proposed methods is trained with only dry vocals.
     </tr>
     <tr>
       <th style="text-align: center;"><a href="https://ieeexplore.ieee.org/document/5547558">WPE [3]</a></th>
-      <td>-</td>
+      <td>Unsupervised</td>
       <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/ADIZ_09_10_idx_3.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
@@ -59,7 +59,7 @@ Pre-trained model of proposed methods is trained with only dry vocals.
     </tr>
     <tr>
       <th style="text-align: center;">Proposed</th>
-      <td>-</td>
+      <td>Unsupervised</td>
       <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/ADIZ_09_10_idx_3.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
@@ -69,7 +69,7 @@ Pre-trained model of proposed methods is trained with only dry vocals.
     </tr>
     <tr>
       <th style="text-align: center;">Proposed+</th>
-      <td>-</td>
+      <td>Unsupervised</td>
       <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/ADIZ_09_10_idx_3.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
