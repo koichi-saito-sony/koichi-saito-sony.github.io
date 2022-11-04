@@ -9,14 +9,16 @@ Pre-trained model of proposed methods is trained with only dry vocals.
 
 |Methods|Manner|Sample 1|Sample 2|Sample 3|
 |:--:|:--:|:--:|:--:|:--:|
-|Wet| - |b |c||
+|Wet| - |<audio controls="controls">
+    <source src="audio/audio_008_vocals_dry.mp3" type="audio/mp3" />
+</audio> <br /> |c||
 |RC [1]| Supervised|b|c||
 |ME [2]| Supervised|b|c||
 |WPE [3]| Unsupervised|b|c||
 |**Proposed**| Unsupervised|b|c||
 |**Proposed+**| Unsupervised|b|c||
 
-[^1]: Since ME is trained with 16 kHz vocals, all samples of ME are 16 kHz. 
+*Since ME is trained with 16 kHz vocals, all samples of ME are sampled at 16 kHz.* 
 
 # Reference
 [1] Koo, S. Paik, and K. Lee, "Reverb conversion of mixed vocal tracks using an end-to-end convolutional deep neural network," in Proceedings of the IEEE International Conference on Acoustics, Speech and Signal Processing, 2021, pp. 81–85.
