@@ -6,15 +6,80 @@ title: Audio samples
 Reverb conversion (RC) [1] and Music enhancement (ME)[^1] [2] are trained with the paris of wet and dry vocals.
 Weighted prediction error (WPE) [3], **Proposed**, and **Proposed+** are unsupervised method.
 Pre-trained model of proposed methods is trained with only dry vocals.
-
-|Methods|Manner|Sample 1|Sample 2|Sample 3|
-|:--:|:--:|:--:|:--:|:--:|
-|Wet| - |<audio controls="controls"><source src="audio/audio_008_vocals_dry.mp3" type="audio/mp3" /></audio> <br/>|<audio controls="controls"><source src="audio/audio_008_vocals_dry.mp3" type="audio/mp3" /></audio> <br/>|<audio controls="controls"><source src="audio/audio_008_vocals_dry.mp3" type="audio/mp3" /></audio> <br/>|
-|RC [1]| Supervised|b|c||
-|ME [2]| Supervised|b|c||
-|WPE [3]| Unsupervised|b|c||
-|**Proposed**| Unsupervised|b|c||
-|**Proposed+**| Unsupervised|b|c||
+<table align="center"  style="text-align: center;">
+  <thead>
+    <tr>
+      <th style="text-align: center;">Methods</th>
+      <th style="text-align: center;">Manner</th>
+      <th style="text-align: center;">Sample 1</th>
+      <th style="text-align: center;">Sample 2</th>
+      <th style="text-align: center;">Sample 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Wet</td>
+      <td>-</td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/ADIZ_09_10_idx_3.wav"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/audio_008_vocals_dry.mp3"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/ADIZ_09_10_idx_3.wav"></audio></td>
+    </tr>
+    <tr>
+      <th style="text-align: center;"><a href="https://arxiv.org/abs/2103.02147">RC [1]</a></th>
+      <td>-</td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/ADIZ_09_10_idx_3.wav"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/audio_008_vocals_dry.mp3"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/ADIZ_09_10_idx_3.wav"></audio></td>
+    </tr>
+    <tr>
+      <th style="text-align: center;"><a href="https://arxiv.org/abs/2204.13289">ME [2]</a></th>
+      <td>-</td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/ADIZ_09_10_idx_3.wav"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/audio_008_vocals_dry.mp3"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/ADIZ_09_10_idx_3.wav"></audio></td>
+    </tr>
+    <tr>
+      <th style="text-align: center;"><a href="https://ieeexplore.ieee.org/document/5547558">WPE [3]</a></th>
+      <td>-</td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/ADIZ_09_10_idx_3.wav"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/audio_008_vocals_dry.mp3"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/ADIZ_09_10_idx_3.wav"></audio></td>
+    </tr>
+    <tr>
+      <th style="text-align: center;">Proposed</th>
+      <td>-</td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/ADIZ_09_10_idx_3.wav"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/audio_008_vocals_dry.mp3"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/ADIZ_09_10_idx_3.wav"></audio></td>
+    </tr>
+    <tr>
+      <th style="text-align: center;">Proposed+</th>
+      <td>-</td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/ADIZ_09_10_idx_3.wav"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/audio_008_vocals_dry.mp3"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/ADIZ_09_10_idx_3.wav"></audio></td>
+    </tr>
+  </tbody>
+</table>    
+<br>
 
 *Since ME is trained with 16 kHz vocals, all samples of ME are sampled at 16 kHz.* 
 
