@@ -79,9 +79,9 @@ The pre-trained model of proposed methods is only trained with the dry vocals.
       <td>coming soon</td>
       <td>coming soon</td> -->
       <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/Proposed+/Proposed+_Vo_008_rev04.wav"></audio></td>
+            <source src="audio/Proposed+/Proposed+_Vo_008_rev04_v2.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/Proposed+/Proposed+_Vo_008_rev02.wav"></audio></td>
+            <source src="audio/Proposed+/Proposed+_Vo_008_rev02_v2.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/Proposed+/Proposed+_Vo_018_rev00.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
