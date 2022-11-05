@@ -17,6 +17,6 @@ Audio samples are [here](./audio_samples.md).
 
 Please see our [paper](https://arxiv.org/).
 
-# Network architecture
+# Pre-training configurations 
 
 Detail settings of the pre-training configurations are [here](./network.md)
