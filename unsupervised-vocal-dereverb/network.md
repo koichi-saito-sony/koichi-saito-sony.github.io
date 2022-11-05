@@ -1,4 +1,4 @@
 ---
-title: Network architecture
+title: Detail settings of pre-training configurations
 ---
-# Under construction
+# UComing soon

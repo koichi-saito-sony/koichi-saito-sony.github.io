@@ -19,4 +19,4 @@ Please see our [paper](https://arxiv.org/).
 
 # Network architecture
 
-Detail explanations of the network architecture are [here](./network.md)
+Detail settings of the pre-training configurations are [here](./network.md)

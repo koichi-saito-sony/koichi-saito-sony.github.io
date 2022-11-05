@@ -3,7 +3,7 @@ title: Audio samples
 ---
 # Audio samples
 
-Reverb conversion (RC) [1] and Music enhancement (ME)[2] are trained with the paris of wet and dry vocals.
+Reverb conversion (RC) [1] and Music enhancement (ME) [2] are trained with the paris of wet and dry vocals.
 Weighted prediction error (WPE) [3], **Proposed**, and **Proposed+** are the unsupervised methods.
 The pre-trained model of proposed methods is only trained with the dry vocals.
 <table align="center"  style="text-align: center;">
@@ -74,18 +74,18 @@ The pre-trained model of proposed methods is only trained with the dry vocals.
     </tr>
     <tr>
       <th style="text-align: center;">Proposed+</th>
+      <!-- <td>coming soon</td>
       <td>coming soon</td>
       <td>coming soon</td>
-      <td>coming soon</td>
-      <td>coming soon</td>
-      <!-- <td><audio  controls="" style="width:150px;" preload="auto">
+      <td>coming soon</td> -->
+      <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/Proposed+/Proposed+_Vo_008_rev04.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/Proposed+/Proposed+_Vo_008_rev02.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/Proposed+/Proposed+_Vo_018_rev00.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/Proposed+/Proposed+_Vo_018_rev02.wav"></audio></td> -->
+            <source src="audio/Proposed+/Proposed+_Vo_018_rev02.wav"></audio></td>
     </tr>
   </tbody>
 </table>    
