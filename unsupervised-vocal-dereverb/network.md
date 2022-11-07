@@ -16,7 +16,7 @@ We also incorporate an adaptive group normalization [2] into each residual block
 We train the model using AdamW [4] with $\beta_{1}=0.9$ and $\beta_{2}=0.999$ in $16$-bit precision [5]. We use an exponential moving average over model parameters with a rate of $0.9999$ [6].
 
 
-
+# Reference
 [1] B. Kawar, M. Elad, S. Ermon, and J. Song, "Denoising diffusion restoration models," in Proceedings of the Advances in Neural Information Processing Systems, 2022.
 
 [2] P. Dhariwal and A. Nichol, "Diffusion models beat GANs on image synthesis," in Advances in Neural Information Processing Systems, 2021, vol. 34, pp. 8780–8794.
