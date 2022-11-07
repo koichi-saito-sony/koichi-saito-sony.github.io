@@ -15,7 +15,10 @@ The hyperparameters for the training of the diffusion model are in the following
 We also incorporate an adaptive group normalization [2] into each residual block.
 We train the model using AdamW [4] with $\beta_{1}=0.9$ and $\beta_{2}=0.999$ in $16$-bit precision [5]. We use an exponential moving average over model parameters with a rate of $0.9999$ [6].
 
-![](./images/demo_table_pre.png)
+<p align="center">
+    <img width="500" src="./images/demo_table_pre.png" alt="Material Bread logo">
+</p>
+
 # Reference
 [1] B. Kawar, M. Elad, S. Ermon, and J. Song, "Denoising diffusion restoration models," in Proceedings of the Advances in Neural Information Processing Systems, 2022.
 
