@@ -1,6 +1,6 @@
 ---
 layout: default
-title: [Unsupervised vocal dereverberation with diffusion-based generative models]
+title: Unsupervised vocal dereverberation with diffusion-based generative models
 description: Koichi Saito, Naoki Murata, Toshimitsu Uesaka, Chieh-Hsin Lai, Yuhta Takida, Takao Fukui, Yuki Mitsufuji 
 ---
 
