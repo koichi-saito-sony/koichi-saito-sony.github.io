@@ -13,10 +13,10 @@ Removing reverb from reverberant music is a necessary technique to clean up audi
 
 Audio samples are [here](./audio_samples.md).
 
-# Paper
-
-Please see our [paper](https://arxiv.org/).
-
 # Pre-training configurations 
 
 Detail settings of the pre-training configurations are [here](./network.md)
+
+# Paper
+
+Please see our [paper](https://arxiv.org/).
