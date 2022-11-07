@@ -15,7 +15,7 @@ Audio samples are [here](./audio_samples.md).
 
 # Pre-training configurations 
 
-Detail settings of the pre-training configurations are [here](./network.md)
+Detail settings of the pre-training configurations are [here](./network.md).
 
 # Paper
 
