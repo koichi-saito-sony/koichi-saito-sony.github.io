@@ -21,7 +21,7 @@ Further, we cut the direct current component of the input signals and input them
 We modified [the original U-Net architecture of the pre-trained model used on DDRM](https://github.com/openai/guided-diffusion) [2] by adding a time-distributed fully connected layer [3] to the last layer of every residual block.
 
 For the training, we reduced the size of the diffusion model to have the fewer trainable parameters ($31.3$ M), and the training took less than three days using one NVIDIA A100 GPU.
-The hyperparameters for the training of the diffusion model are in the following Table 1.
+The hyperparameters for the training of the diffusion model are in the following $\textrm{Table 1}$.
 We also incorporate an adaptive group normalization [2] into each residual block.
 We train the model using AdamW [4] with $\beta_{1}=0.9$ and $\beta_{2}=0.999$ in $16$-bit precision [5]. We use an exponential moving average over model parameters with a rate of $0.9999$ [6].
 
