@@ -24,9 +24,9 @@ The pre-trained model of proposed methods is only trained with the dry vocals.
       <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/Wet/Vo_018_rev00_norm.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/Wet/Vo_008_rev02_norm.wav"></audio></td>
+            <source src="audio/Wet/Vo_008_rev02wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/Wet/Vo_018_rev02.wav"></audio></td>
+            <source src="audio/Wet/Vo_018_rev02_norm.wav"></audio></td>
     </tr>
     <tr>
       <th style="text-align: center;"><a href="https://arxiv.org/abs/2103.02147">RC [1]</a></th>
@@ -35,9 +35,9 @@ The pre-trained model of proposed methods is only trained with the dry vocals.
       <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/RC/RC_Vo_018_rev00_norm.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/RC/RC_Vo_008_rev02_norm.wav"></audio></td>
+            <source src="audio/RC/RC_Vo_008_rev02.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/RC/RC_Vo_018_rev02.wav"></audio></td>
+            <source src="audio/RC/RC_Vo_018_rev02_norm..wav"></audio></td>
     </tr>
     <tr>
       <th style="text-align: center;"><a href="https://arxiv.org/abs/2204.13289">ME [2]</a></th>
@@ -53,13 +53,13 @@ The pre-trained model of proposed methods is only trained with the dry vocals.
     <tr>
       <th style="text-align: center;"><a href="https://ieeexplore.ieee.org/document/5547558">WPE [3]</a></th>
       <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/WPE/WPE_Vo_008_rev04_norm.wav"></audio></td>
+            <source src="audio/WPE/WPE_Vo_008_rev04.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/WPE/WPE_Vo_018_rev00.wav"></audio></td>
+            <source src="audio/WPE/WPE_Vo_018_rev00_norm..wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/WPE/WPE_Vo_008_rev02_norm.wav"></audio></td>
+            <source src="audio/WPE/WPE_Vo_008_rev02.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/WPE/WPE_Vo_018_rev02.wav"></audio></td>
+            <source src="audio/WPE/WPE_Vo_018_rev02_norm..wav"></audio></td>
     </tr>
     <tr>
       <th style="text-align: center;">Proposed</th>
@@ -68,9 +68,9 @@ The pre-trained model of proposed methods is only trained with the dry vocals.
       <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/Proposed/Proposed_Vo_018_rev00_norm.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/Proposed/Proposed_Vo_008_rev02_norm.wav"></audio></td>
+            <source src="audio/Proposed/Proposed_Vo_008_rev02.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/Proposed/Proposed_Vo_018_rev02.wav"></audio></td>
+            <source src="audio/Proposed/Proposed_Vo_018_rev02_norm..wav"></audio></td>
     </tr>
     <tr>
       <th style="text-align: center;">Proposed+</th>
@@ -79,9 +79,9 @@ The pre-trained model of proposed methods is only trained with the dry vocals.
       <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/Proposed+/Proposed+_Vo_018_rev00_norm.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/Proposed+/Proposed+_Vo_008_rev02_norm.wav"></audio></td>
+            <source src="audio/Proposed+/Proposed+_Vo_008_rev02.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/Proposed+/Proposed+_Vo_018_rev02.wav"></audio></td>
+            <source src="audio/Proposed+/Proposed+_Vo_018_rev02_norm..wav"></audio></td>
     </tr>
   </tbody>
 </table>    
