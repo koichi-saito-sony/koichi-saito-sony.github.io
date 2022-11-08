@@ -18,7 +18,7 @@ The pre-trained model of proposed methods is only trained with the dry vocals.
   </thead>
   <tbody>
     <tr>
-      <td>Wet (Unprocessed)</td>
+      <td>Wet <br> (Unprocessed)</td>
       <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/Wet/Vo_008_rev04_norm.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
@@ -29,7 +29,7 @@ The pre-trained model of proposed methods is only trained with the dry vocals.
             <source src="audio/Wet/Vo_018_rev02_norm.wav"></audio></td>
     </tr>
     <tr>
-      <th style="text-align: center;"><a href="https://arxiv.org/abs/2103.02147">RC [1]</a></th>
+      <th style="text-align: center;"><a href="https://arxiv.org/abs/2103.02147">RC [1] <br> (Supervised)</a></th>
       <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/RC/RC_Vo_008_rev04_norm.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
@@ -40,7 +40,7 @@ The pre-trained model of proposed methods is only trained with the dry vocals.
             <source src="audio/RC/RC_Vo_018_rev02_norm.wav"></audio></td>
     </tr>
     <tr>
-      <th style="text-align: center;"><a href="https://arxiv.org/abs/2204.13289">ME [2]</a></th>
+      <th style="text-align: center;"><a href="https://arxiv.org/abs/2204.13289">ME [2] <br> (Supervised)</a></th>
       <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/ME/ME_Vo_008_rev04_norm.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
@@ -51,7 +51,7 @@ The pre-trained model of proposed methods is only trained with the dry vocals.
             <source src="audio/ME/ME_Vo_018_rev02_norm.wav"></audio></td>
     </tr>
     <tr>
-      <th style="text-align: center;"><a href="https://ieeexplore.ieee.org/document/5547558">WPE [3]</a></th>
+      <th style="text-align: center;"><a href="https://ieeexplore.ieee.org/document/5547558">WPE [3] <br> (Unsupervised)</a></th>
       <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/WPE/WPE_Vo_008_rev04.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
@@ -62,7 +62,7 @@ The pre-trained model of proposed methods is only trained with the dry vocals.
             <source src="audio/WPE/WPE_Vo_018_rev02_norm.wav"></audio></td>
     </tr>
     <tr>
-      <th style="text-align: center;">Proposed</th>
+      <th style="text-align: center;">Proposed <br> (Unsupervised)</th>
       <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/Proposed/Proposed_Vo_008_rev04_norm.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
@@ -73,7 +73,7 @@ The pre-trained model of proposed methods is only trained with the dry vocals.
             <source src="audio/Proposed/Proposed_Vo_018_rev02_norm.wav"></audio></td>
     </tr>
     <tr>
-      <th style="text-align: center;">Proposed+</th>
+      <th style="text-align: center;">Proposed+ <br> (Unsupervised)</th>
       <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/Proposed+/Proposed+_Vo_008_rev04_norm.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
@@ -87,7 +87,7 @@ The pre-trained model of proposed methods is only trained with the dry vocals.
 </table>    
 <br>
 
-*Since ME is trained with 16 kHz vocals, all samples of ME are sampled at 16 kHz.* 
+*Note that the audio samples of ME are 16 kHz since ME is trained with 16 kHz vocals. All the other audio samples are 44.1 kHz* 
 
 # Reference
 [1] Koo, S. Paik, and K. Lee, "Reverb conversion of mixed vocal tracks using an end-to-end convolutional deep neural network," in Proceedings of the IEEE International Conference on Acoustics, Speech and Signal Processing, 2021, pp. 81–85.

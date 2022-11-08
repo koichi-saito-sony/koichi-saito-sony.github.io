@@ -12,7 +12,7 @@ title: Settings of pre-training configurations
 </script>
 
 # Settings of pre-training configurations
-In this page, we explain the more detailed settings of the training configurations of the pre-trained diffusion model. 
+In this page, we additionally demonstrate the detailed settings of the training configurations of the pre-trained diffusion model. 
 
 The implementation of the network architecture of the pre-trained diffusion model is mostly based on [the code provided by the authors of the DDRM paper](https://github.com/bahjat-kawar/ddrm) [1].
 We slightly modify some parts as follows. 
@@ -26,7 +26,7 @@ We also incorporate an adaptive group normalization [2] into each residual block
 We train the model using AdamW [4] with $\beta_{1}=0.9$ and $\beta_{2}=0.999$ in $16$-bit precision [5]. We use an exponential moving average over model parameters with a rate of $0.9999$ [6].
 
 <p align="center">
-    <img width="500" src="./images/demo_table_pre.png" alt="Material Bread logo">
+    <img width="500" src="./images/demo_table.png" alt="Material Bread logo">
 </p>
 
 # Reference
