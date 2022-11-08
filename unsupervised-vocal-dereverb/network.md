@@ -32,15 +32,14 @@ We train the model using AdamW [4] with $\beta_{1}=0.9$ and $\beta_{2}=0.999$ in
 # Reference
 [1] B. Kawar, M. Elad, S. Ermon, and J. Song, "Denoising diffusion restoration models," in Proceedings of the Advances in Neural Information Processing Systems, 2022.
 
-[2] P. Dhariwal and A. Nichol, "Diffusion models beat GANs on image synthesis," in Advances in Neural Information Processing Systems, 2021, vol. 34, pp. 8780–8794.
+[2] P. Dhariwal and A. Nichol, "Diffusion models beat GANs on image synthesis," in Proceedings of the Advances in Neural Information Processing Systems, 2021, vol. 34, pp. 8780–8794.
 
 [3] W. Choi, M. Kim, J. Chung, D. Lee, and S. Jung, "Investigating U-Nets with various intermediate blocks for spectrogram-based singing voice separation.," in Proceedings of the International Society for Music Information Retrieval Conference, 2020.
 
-[4] I. Loshchilov and F. Hutter, "Decoupled weight decay regularization," in Proceedings of the the International Conference on Learning Representations, 2019.
+[4] I. Loshchilov and F. Hutter, "Decoupled weight decay regularization," in Proceedings of the International Conference on Learning Representations, 2019.
 
-[5] P. Micikevicius, S. Narang, J. Alben, G. Diamos, E. Elsen, D. Garcia, B. Ginsburg, M. Houston, O. Kuchaiev, G. Venkatesh, and H. Wu, "Mixed precision training," in Proceedings of International Conference on Learning Representations, 2018.
+[5] P. Micikevicius, S. Narang, J. Alben, G. Diamos, E. Elsen, D. Garcia, B. Ginsburg, M. Houston, O. Kuchaiev, G. Venkatesh, and H. Wu, "Mixed precision training," in Proceedings of the International Conference on Learning Representations, 2018.
 
-[6] Y. Song and S. Ermon, "Improved techniques for training score-based generative models," in Advances in Neural Information Processing Systems, 2020, vol. 33, pp. 12438–12448.
+[6] Y. Song and S. Ermon, "Improved techniques for training score-based generative models," in Proceedings of the Advances in Neural Information Processing Systems, 2020, vol. 33, pp. 12438–12448.
 
-[7] A. Nichol and P. Dhariwal, "Improved denoising diffusion proba-
-bilistic models," arXiv preprint arXiv:2102.09672, 2021.
+[7] A. Nichol and P. Dhariwal, "Improved denoising diffusion probabilistic models," arXiv preprint arXiv:2102.09672, 2021.
