@@ -11,8 +11,8 @@ The pre-trained model of proposed methods is only trained with the dry vocals.
     <tr>
       <th style="text-align: center;">Methods</th>
       <th style="text-align: center;">Sample 1 w/ short reverb</th>
-      <th style="text-align: center;">Sample 1 w/ long reverb</th>
       <th style="text-align: center;">Sample 2 w/ short reverb</th>
+      <th style="text-align: center;">Sample 1 w/ long reverb</th>
       <th style="text-align: center;">Sample 2 w/ long reverb</th>
     </tr>
   </thead>
@@ -20,72 +20,68 @@ The pre-trained model of proposed methods is only trained with the dry vocals.
     <tr>
       <td>Wet (Unprocessed)</td>
       <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/Wet/Vo_008_rev04.wav"></audio></td>
-      <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/Wet/Vo_008_rev02.wav"></audio></td>
-      <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/Wet/Vo_018_rev00.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/Wet/Vo_008_rev04.wav"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/Wet/Vo_018_rev02.wav"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/Wet/Vo_008_rev02.wav"></audio></td>
     </tr>
     <tr>
       <th style="text-align: center;"><a href="https://arxiv.org/abs/2103.02147">RC [1]</a></th>
       <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/RC/RC_Vo_008_rev04.wav"></audio></td>
-      <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/RC/RC_Vo_008_rev02.wav"></audio></td>
-      <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/RC/RC_Vo_018_rev00.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/RC/RC_Vo_008_rev04.wav"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/RC/RC_Vo_018_rev02.wav"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/RC/RC_Vo_008_rev02.wav"></audio></td>
     </tr>
     <tr>
       <th style="text-align: center;"><a href="https://arxiv.org/abs/2204.13289">ME [2]</a></th>
       <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/ME/ME_Vo_008_rev04.wav"></audio></td>
-      <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/ME/ME_Vo_008_rev02.wav"></audio></td>
-      <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/ME/ME_Vo_018_rev00.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/ME/ME_Vo_008_rev04.wav"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/ME/ME_Vo_018_rev02.wav"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/ME/ME_Vo_008_rev02.wav"></audio></td>
     </tr>
     <tr>
       <th style="text-align: center;"><a href="https://ieeexplore.ieee.org/document/5547558">WPE [3]</a></th>
       <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/WPE/WPE_Vo_008_rev04.wav"></audio></td>
-      <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/WPE/WPE_Vo_008_rev02.wav"></audio></td>
-      <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/WPE/WPE_Vo_018_rev00.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/WPE/WPE_Vo_008_rev04.wav"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/WPE/WPE_Vo_018_rev02.wav"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/WPE/WPE_Vo_008_rev02.wav"></audio></td>
     </tr>
     <tr>
       <th style="text-align: center;">Proposed</th>
       <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/Proposed/Proposed_Vo_008_rev04.wav"></audio></td>
-      <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/Proposed/Proposed_Vo_008_rev02.wav"></audio></td>
-      <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/Proposed/Proposed_Vo_018_rev00.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/Proposed/Proposed_Vo_008_rev04.wav"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/Proposed/Proposed_Vo_018_rev02.wav"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/Proposed/Proposed_Vo_008_rev02.wav"></audio></td>
     </tr>
     <tr>
       <th style="text-align: center;">Proposed+</th>
-      <!-- <td>coming soon</td>
-      <td>coming soon</td>
-      <td>coming soon</td>
-      <td>coming soon</td> -->
-      <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/Proposed+/Proposed+_Vo_008_rev04_v2.wav"></audio></td>
-      <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/Proposed+/Proposed+_Vo_008_rev02_v2.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/Proposed+/Proposed+_Vo_018_rev00.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/Proposed+/Proposed+_Vo_008_rev04.wav"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/Proposed+/Proposed+_Vo_018_rev02.wav"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/Proposed+/Proposed+_Vo_008_rev02.wav"></audio></td>
     </tr>
   </tbody>
 </table>    
