@@ -14,13 +14,13 @@ title: Detail settings of pre-training configurations
 # Detail settings of pre-training configurations
 In this page, we explain the more detailed settings of the training configurations of the pre-trained diffusion model. 
 
-The implementation of our method and the network architecture of the pre-trained diffusion model were mostly based on [the code provided by the authors of the DDRM paper](https://github.com/bahjat-kawar/ddrm) [1].
-We slightly modified some parts as follows. 
-We converted each audio input into a complex-valued STFT representation using a window size of $1024$, a hop size of $256$, and a Hann window.
+The implementation of the network architecture of the pre-trained diffusion model is mostly based on [the code provided by the authors of the DDRM paper](https://github.com/bahjat-kawar/ddrm) [1].
+We slightly modify some parts as follows. 
+We convert each audio input into a complex-valued STFT representation using a window size of $1024$, a hop size of $256$, and a Hann window.
 Further, we cut the direct current component of the input signals and input them as $2$-channeled $512 \times 512$ image data to follow the original input configurations. The first channel corresponds to the real value and the second to the imaginary value.
-We modified [the original U-Net architecture of the pre-trained model used on DDRM](https://github.com/openai/guided-diffusion) [2] by adding a time-distributed fully connected layer [3] to the last layer of every residual block.
+We modify [the original U-Net architecture of the pre-trained model used on DDRM](https://github.com/openai/guided-diffusion) [2] by adding a time-distributed fully connected layer [3] to the last layer of every residual block.
 
-For the training, we reduced the size of the diffusion model to have the fewer trainable parameters ($31.3$ M), and the training took less than three days using one NVIDIA A100 GPU.
+For the training, we reduce the size of the diffusion model to have the fewer trainable parameters ($31.3$ M), and the training takes less than three days using one NVIDIA A100 GPU.
 The hyperparameters for the training of the diffusion model are in the following $\textrm{Table 1}$.
 We also incorporate an adaptive group normalization [2] into each residual block.
 We train the model using AdamW [4] with $\beta_{1}=0.9$ and $\beta_{2}=0.999$ in $16$-bit precision [5]. We use an exponential moving average over model parameters with a rate of $0.9999$ [6].
