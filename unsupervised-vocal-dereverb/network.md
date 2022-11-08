@@ -1,5 +1,5 @@
 ---
-title: Detail settings of pre-training configurations
+title: Settings of pre-training configurations
 ---
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
 <script type="text/x-mathjax-config">
@@ -11,7 +11,7 @@ title: Detail settings of pre-training configurations
  });
 </script>
 
-# Detail settings of pre-training configurations
+# Settings of pre-training configurations
 In this page, we explain the more detailed settings of the training configurations of the pre-trained diffusion model. 
 
 The implementation of the network architecture of the pre-trained diffusion model is mostly based on [the code provided by the authors of the DDRM paper](https://github.com/bahjat-kawar/ddrm) [1].
