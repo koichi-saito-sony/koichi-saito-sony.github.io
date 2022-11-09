@@ -87,7 +87,7 @@ The pre-trained model of proposed methods is only trained with the dry vocals.
 </table>    
 <br>
 
-*Note that the audio samples of ME are 16 kHz since ME is trained with 16 kHz vocals. All the other audio samples are 44.1 kHz* 
+*Note that the audio samples of ME are 16 kHz since ME is trained with 16 kHz vocals. All the other audio samples are 44.1 kHz.* 
 
 # Reference
 [1] Koo, S. Paik, and K. Lee, "Reverb conversion of mixed vocal tracks using an end-to-end convolutional deep neural network," in Proceedings of the IEEE International Conference on Acoustics, Speech and Signal Processing, 2021, pp. 81–85.
