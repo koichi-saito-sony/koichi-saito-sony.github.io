@@ -19,4 +19,4 @@ Settings of the pre-training configurations are [here](./network.md).
 
 # Paper
 
-Please see our [paper](https://arxiv.org/).
+Please see our [paper](https://arxiv.org/abs/2211.04124).
