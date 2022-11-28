@@ -13,6 +13,10 @@ Removing reverb from reverberant music is a necessary technique to clean up audi
 
 Audio samples are [here](./audio_samples.md).
 
+## Image samples (Image deblurring)
+
+This technique can also be used to remove blur from images. Samples are available [here](./image_samples.md).
+
 # Pre-training configurations 
 
 Settings of the pre-training configurations are [here](./network.md).
