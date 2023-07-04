@@ -4,84 +4,95 @@ title: Audio samples
 # Audio samples
 
 Reverb conversion (RC) [1] and Music enhancement (ME) [2] are trained with the paris of wet and dry vocals.
-Weighted prediction error (WPE) [3], **Proposed**, and **Proposed+** are the unsupervised methods.
+Weighted prediction error (WPE) [3], **DiffDereverb**, **DiffDereverb+**, and **DiffDereverb w/ GibbsDDRM** are the unsupervised methods.
 The pre-trained model of proposed methods is only trained with the dry vocals.
 <table align="center"  style="text-align: center;">
   <thead>
     <tr>
       <th style="text-align: center;">Methods</th>
-      <th style="text-align: center;">Sample 1 w/ short reverb</th>
-      <th style="text-align: center;">Sample 2 w/ short reverb</th>
       <th style="text-align: center;">Sample 1 w/ long reverb</th>
       <th style="text-align: center;">Sample 2 w/ long reverb</th>
+      <th style="text-align: center;">Sample 1 w/ short reverb</th>
+      <th style="text-align: center;">Sample 2 w/ short reverb</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>Wet <br> (Unprocessed)</td>
       <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/Wet/Vo_008_rev04_norm.wav"></audio></td>
-      <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/Wet/Vo_018_rev00_norm.wav"></audio></td>
-      <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/Wet/Vo_008_rev02.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/Wet/Vo_018_rev02_norm.wav"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/Wet/Vo_008_rev04_norm.wav"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/Wet/Vo_018_rev00_norm.wav"></audio></td>
     </tr>
     <tr>
       <th style="text-align: center;"><a href="https://arxiv.org/abs/2103.02147">RC [1] <br> (Supervised)</a></th>
       <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/RC/RC_Vo_008_rev04_norm.wav"></audio></td>
-      <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/RC/RC_Vo_018_rev00_norm.wav"></audio></td>
-      <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/RC/RC_Vo_008_rev02.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/RC/RC_Vo_018_rev02_norm.wav"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/RC/RC_Vo_008_rev04_norm.wav"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/RC/RC_Vo_018_rev00_norm.wav"></audio></td>
     </tr>
     <tr>
       <th style="text-align: center;"><a href="https://arxiv.org/abs/2204.13289">ME [2] <br> (Supervised)</a></th>
       <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/ME/ME_Vo_008_rev04_norm.wav"></audio></td>
-      <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/ME/ME_Vo_018_rev00_norm.wav"></audio></td>
-      <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/ME/ME_Vo_008_rev02_norm.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/ME/ME_Vo_018_rev02_norm.wav"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/ME/ME_Vo_008_rev04_norm.wav"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/ME/ME_Vo_018_rev00_norm.wav"></audio></td>
     </tr>
     <tr>
       <th style="text-align: center;"><a href="https://ieeexplore.ieee.org/document/5547558">WPE [3] <br> (Unsupervised)</a></th>
       <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/WPE/WPE_Vo_008_rev04.wav"></audio></td>
-      <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/WPE/WPE_Vo_018_rev00_norm.wav"></audio></td>
-      <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/WPE/WPE_Vo_008_rev02.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/WPE/WPE_Vo_018_rev02_norm.wav"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/WPE/WPE_Vo_008_rev04.wav"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/WPE/WPE_Vo_018_rev00_norm.wav"></audio></td>
     </tr>
     <tr>
-      <th style="text-align: center;">Proposed <br> (Unsupervised)</th>
-      <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/Proposed/Proposed_Vo_008_rev04_norm.wav"></audio></td>
-      <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/Proposed/Proposed_Vo_018_rev00_norm.wav"></audio></td>
+      <th style="text-align: center;"><a href="https://ieeexplore.ieee.org/document/10095761">DiffDereverb [4] <br> (Unsupervised)</th>
       <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/Proposed/Proposed_Vo_008_rev02.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/Proposed/Proposed_Vo_018_rev02_norm.wav"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/Proposed/Proposed_Vo_008_rev04_norm.wav"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/Proposed/Proposed_Vo_018_rev00_norm.wav"></audio></td>
     </tr>
     <tr>
-      <th style="text-align: center;">Proposed+ <br> (Unsupervised)</th>
-      <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/Proposed+/Proposed+_Vo_008_rev04_norm.wav"></audio></td>
-      <td><audio  controls="" style="width:150px;" preload="auto">
-            <source src="audio/Proposed+/Proposed+_Vo_018_rev00_norm.wav"></audio></td>
+      <th style="text-align: center;"><a href="https://ieeexplore.ieee.org/document/10095761">DiffDereverb+ [4] <br> (Unsupervised)</th>
       <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/Proposed+/Proposed+_Vo_008_rev02.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/Proposed+/Proposed+_Vo_018_rev02_norm.wav"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/Proposed+/Proposed+_Vo_008_rev04_norm.wav"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/Proposed+/Proposed+_Vo_018_rev00_norm.wav"></audio></td>
+    </tr>
+    <tr>
+      <th style="text-align: center;"><a href="https://arxiv.org/abs/2301.12686">DiffDereverb w/ GibbsDDRM [5] <br> (Unsupervised)</th>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/GibbsDDRM/GibbsDDRM_Vo_008_rev02.wav"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/GibbsDDRM/GibbsDDRM_Vo_018_rev02_norm.wav"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/GibbsDDRM/GibbsDDRM_Vo_008_rev04_norm.wav"></audio></td>
+      <td><audio  controls="" style="width:150px;" preload="auto">
+            <source src="audio/GibbsDDRM/GibbsDDRM_Vo_018_rev00_norm.wav"></audio></td>
     </tr>
   </tbody>
 </table>    
@@ -95,3 +106,7 @@ The pre-trained model of proposed methods is only trained with the dry vocals.
 [2] N. Kandpal, O. Nieto, and Z. Jin, "Music enhancement via image translation and vocoding," in Proceedings of the IEEE International Conference on Acoustics, Speech and Signal Processing, 2022, pp. 3124–3128.
 
 [3] T. Nakatani, T. Yoshioka, K. Kinoshita, M. Miyoshi, and B.-H. Juang, "Speech dereverberation based on variance-normalized delayed linear prediction," IEEE Transactions on Audio, Speech, and Language Processing, vol. 18, pp. 1717–1731, 2010.
+
+[4] K. Saito, N. Murata, T. Uesaka, C.-H. Lai, Y. Takida, T. Fukui, Y. Mitsufuji, "Unsupervised Vocal Dereverberation with Diffusion-Based Generative Models," in Proceedings of the IEEE International Conference on Acoustics, Speech and Signal Processing, 2023, pp. 1–5.
+
+[5] N. Murata, K. Saito, C.-H. Lai, Y. Takida, T. Uesaka, Y. Mitsufuji, S. Ermon, "GibbsDDRM: A Partially Collapsed Gibbs Sampler for Solving Blind Inverse Problems with Denoising Diffusion Restoration," 40th International Conference on Machine Learning, 2023.
