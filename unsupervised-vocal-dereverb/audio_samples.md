@@ -63,7 +63,7 @@ The pre-trained model of proposed methods is only trained with the dry vocals.
             <source src="audio/WPE/WPE_Vo_018_rev00_norm.wav"></audio></td>
     </tr>
     <tr>
-      <th style="text-align: center;"><a href="https://ieeexplore.ieee.org/document/10095761">DiffDereverb [4] <br> (Unsupervised)</th>
+      <th style="text-align: center;"><a href="https://ieeexplore.ieee.org/document/10095761">DiffDereverb [4] <br> (Unsupervised)</a></th>
       <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/Proposed/Proposed_Vo_008_rev02.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
@@ -74,7 +74,7 @@ The pre-trained model of proposed methods is only trained with the dry vocals.
             <source src="audio/Proposed/Proposed_Vo_018_rev00_norm.wav"></audio></td>
     </tr>
     <tr>
-      <th style="text-align: center;"><a href="https://ieeexplore.ieee.org/document/10095761">DiffDereverb+ [4] <br> (Unsupervised)</th>
+      <th style="text-align: center;"><a href="https://ieeexplore.ieee.org/document/10095761">DiffDereverb+ [4] <br> (Unsupervised)</a></th>
       <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/Proposed+/Proposed+_Vo_008_rev02.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
@@ -85,7 +85,7 @@ The pre-trained model of proposed methods is only trained with the dry vocals.
             <source src="audio/Proposed+/Proposed+_Vo_018_rev00_norm.wav"></audio></td>
     </tr>
     <tr>
-      <th style="text-align: center;"><a href="https://arxiv.org/abs/2301.12686">DiffDereverb w/ GibbsDDRM [5] <br> (Unsupervised)</th>
+      <th style="text-align: center;"><a href="https://arxiv.org/abs/2301.12686">DiffDereverb w/ GibbsDDRM [5] <br> (Unsupervised)</a></th>
       <td><audio  controls="" style="width:150px;" preload="auto">
             <source src="audio/GibbsDDRM/GibbsDDRM_Vo_008_rev02.wav"></audio></td>
       <td><audio  controls="" style="width:150px;" preload="auto">
@@ -98,7 +98,6 @@ The pre-trained model of proposed methods is only trained with the dry vocals.
   </tbody>
 </table>    
 <br>
-
 
 *Note that the audio samples of ME are 16 kHz since ME is trained with 16 kHz vocals. All the other audio samples are 44.1 kHz.* 
 
