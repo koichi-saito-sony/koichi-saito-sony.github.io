@@ -6,6 +6,7 @@ title: Audio samples
 Reverb conversion (RC) [1] and Music enhancement (ME) [2] are trained with the paris of wet and dry vocals.
 Weighted prediction error (WPE) [3], **DiffDereverb**, **DiffDereverb+**, and **DiffDereverb w/ GibbsDDRM** are the unsupervised methods.
 The pre-trained model of proposed methods is only trained with the dry vocals.
+
 <table align="center"  style="text-align: center;">
   <thead>
     <tr>
@@ -97,6 +98,7 @@ The pre-trained model of proposed methods is only trained with the dry vocals.
   </tbody>
 </table>    
 <br>
+
 
 *Note that the audio samples of ME are 16 kHz since ME is trained with 16 kHz vocals. All the other audio samples are 44.1 kHz.* 
 
