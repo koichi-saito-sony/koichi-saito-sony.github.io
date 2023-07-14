@@ -1,9 +1,9 @@
 ---
 title: Audio samples
 ---
-# Vocal dereverberation samples from GibbsDDRM [1, ICML2023] and DiffDereverb [2, ICASSP2023]
+# Vocal dereverberation samples from GibbsDDRM and DiffDereverb
 
-**DiffDereverb w/ GibbsDDRM [1]**, **DiffDereverb**, and **DiffDereverb+** are our proposed methods.
+**DiffDereverb w/ GibbsDDRM [1, ICML2023]**, **DiffDereverb [2, ICASSP2023]**, and **DiffDereverb+ [2, ICASSP2023]** are our proposed methods.
 The pre-trained diffusion models of proposed methods are only trained with the dry vocals.
 Reverb conversion (RC) [3] and Music enhancement (ME) [4] are trained with the paris of wet and dry vocals.
 
