@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-MML-AM_HTMLorMML-full"> </script>
+
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="SOTAs for one step diffusion model generation.">
+  <meta property="og:title" content="Consistency Trajectory Models"/>
+  <meta property="og:description" content="SOTAs for one step diffusion model generation."/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/icon.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="Consistency Trajectory Models">
+  <meta name="twitter:description" content="SOTAs for one step diffusion model generation.">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/icon.png">
+  <meta name="twitter:card" content="icon.png">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>CTM</title>
+  <link rel="icon" type="image/x-icon" href="static/images/icon.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">SoundCTM: Uniting Score-based and Consistency Models for Text-to-Sound Generation</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <span>Koichi Saito</span><span><sup>1</sup></span>,</span>
+              <span class="author-block">
+              <a href="https://sites.google.com/view/dongjun-kim" target="_blank">Dongjun Kim</a><span><sup>2</sup></span>,</span>
+              <span class="author-block">
+                <span>Takashi Shibuya</span><span><sup>1</sup></span>,</span>
+                <span class="author-block">
+                <a href="https://chiehhsinjesselai.github.io/ChiehHsinLai/" target="_blank">Chieh-Hsin Lai</a><sup>1</sup></span>,</span><br>
+                  <span class="author-block">
+                  <span>Zhi Zhong</span><span><sup>3</sup></span>,</span>
+                      <span class="author-block">
+                        <span>Yuhta Takida</span><span><sup>1</sup></span>,</span>
+                              <span class="author-block">
+                              <a href="https://www.yukimitsufuji.com/" target="_blank">Yuki Mitsufuji</a><span><sup>1,3</sup></span>,</span>
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block"><sup>1</sup>Sony AI, <sup>2</sup>Stanford University, <sup>3</sup>Sony Group Corporation
+<!--                     <span class="eql-cntrb"><small><br><center><img src="static/images/cifar_badge.svg" alt="MY ALT TEXT" width="100%"/></center></small></span> -->
+                  </div>
+                  
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/2405.18503.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper PDF</span>
+                      </a>
+                    </span>
+
+                    <!-- Supplementary PDF link 
+                    <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary </span>
+                    </a>
+                  </span>-->
+
+                  <!-- ArXiv abstract Link -->
+                  <span class="link-block">
+                    <a href="https://arxiv.org/abs/2405.18503" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/sony/soundctm" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Sound content is an indispensable element for multimedia works such as video games, music, and films. Recent high-quality diffusion-based sound generation models can serve as valuable tools for the creators. However, despite producing high-quality sounds, these models often suffer from slow inference speeds. This drawback burdens creators, who typically refine their sounds through trial and error to align them with their artistic intentions. To address this issue, we introduce <b>Sound</b> <b>C</b>onsistency <b>T</b>rajectory <b>M</b>odels (<b>SoundCTM</b>). Our model enables flexible transitioning between high-quality 1-step sound generation and superior sound quality through multi-step generation. This allows creators to initially control sounds with 1-step samples before refining them through multi-step generation. While CTM fundamentally achieves flexible 1-step and multi-step generation, its impressive performance heavily depends on an additional pretrained feature extractor and an adversarial loss, which are expensive to train and not always available in other domains. Thus, we reframe CTM's training framework and introduce a novel feature distance by utilizing the teacher's network for a distillation loss. Additionally, while distilling classifier-free guided trajectories, we train conditional and unconditional student models simultaneously and interpolate between these models during inference. We also propose training-free controllable frameworks for SoundCTM, leveraging its flexible sampling capability. SoundCTM achieves both promising 1-step and multi-step real-time sound generation without using any extra off-the-shelf networks. Furthermore, we demonstrate SoundCTM's capability of controllable sound generation in a training-free manner.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<br></br>
+        <h2 id="section_1">
+              Text-to-Sound Generation (various sampling steps)
+            </h2>
+            <!-- <p><b>
+                <font color="061E61">Short Samples:</font>
+              </b></p> -->
+            <div class = "table-container">
+            <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
+              <thead>
+                <tr>
+                  <th scope="col" width="265px">Text prompts</th>
+                  <th scope="col" width="265px">SoundCTM (1 step)</th>
+                  <th scope="col" width="265px">SoundCTM (4 steps)</th>
+                  <th scope="col" width="265px">SoundCTM (16 steps)</th>
+                  <th scope="col" width="265px"><a href="https://arxiv.org/pdf/2304.13731" target="_blank">TANGO (Teacher model)</a></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Frogs croaking and a humming with insects vocalizing.</th>
+                    <td><audio controls="controls">
+                      <source
+                        src="static/audio/student_1_3.wav"
+                        autoplay />Your browser does not support the audio element.
+                    </audio></td>
+                    <td><audio controls="controls">
+                      <source
+                        src="static/audio/student_4_3.wav"
+                        autoplay />Your browser does not support the audio element.
+                    </audio></td>
+                    <td><audio controls="controls">
+                      <source
+                        src="static/audio/student_16_3.wav"
+                        autoplay />Your browser does not support the audio element.
+                    </audio></td>
+                    <td><audio controls="controls">
+                      <source
+                        src="static/audio/teacher_3.wav"
+                        autoplay />Your browser does not support the audio element.
+                    </audio></td>
+                </tr>
+                <tr>
+                  <td>An adult male speaks while birds chirp, slight rustling and brief buzzing occur, and emergency vehicle sirens are blaring in the distance.</th>
+                    <td><audio controls="controls">
+                      <source
+                        src="static/audio/student_1_2.wav"
+                        autoplay />Your browser does not support the audio element.
+                    </audio></td>
+                    <td><audio controls="controls">
+                      <source
+                        src="static/audio/student_4_2.wav"
+                        autoplay />Your browser does not support the audio element.
+                    </audio></td>
+                    <td><audio controls="controls">
+                      <source
+                        src="static/audio/student_16_2.wav"
+                        autoplay />Your browser does not support the audio element.
+                    </audio></td>
+                    <td><audio controls="controls">
+                      <source
+                        src="static/audio/teacher_2.wav"
+                        autoplay />Your browser does not support the audio element.
+                    </audio></td>
+                </tr>
+                <tr>
+                  <td>A man speaks and then an audience claps.</th>
+                    <td><audio controls="controls">
+                      <source
+                        src="static/audio/student_1_9.wav"
+                        autoplay />Your browser does not support the audio element.
+                    </audio></td>
+                    <td><audio controls="controls">
+                      <source
+                        src="static/audio/student_4_9.wav"
+                        autoplay />Your browser does not support the audio element.
+                    </audio></td>
+                    <td><audio controls="controls">
+                      <source
+                        src="static/audio/student_16_9.wav"
+                        autoplay />Your browser does not support the audio element.
+                    </audio></td>
+                    <td><audio controls="controls">
+                      <source
+                        src="static/audio/teacher_9.wav"
+                        autoplay />Your browser does not support the audio element.
+                    </audio></td>
+                </tr>
+                <tr>
+                  <td>Loud explosions and bangs followed by men speaking.</th>
+                    <td><audio controls="controls">
+                      <source
+                        src="static/audio/student_1_5.wav"
+                        autoplay />Your browser does not support the audio element.
+                    </audio></td>
+                    <td><audio controls="controls">
+                      <source
+                        src="static/audio/student_4_5.wav"
+                        autoplay />Your browser does not support the audio element.
+                    </audio></td>
+                    <td><audio controls="controls">
+                      <source
+                        src="static/audio/student_16_5.wav"
+                        autoplay />Your browser does not support the audio element.
+                    </audio></td>
+                    <td><audio controls="controls">
+                      <source
+                        src="static/audio/teacher_5.wav"
+                        autoplay />Your browser does not support the audio element.
+                    </audio></td>
+                </tr>
+                <tr>
+                  <td>Ocean waves crashing as water trickles as gusts of wind blow and seagulls squawk in the distance.</th>
+                    <td><audio controls="controls">
+                      <source
+                        src="static/audio/student_1_6.wav"
+                        autoplay />Your browser does not support the audio element.
+                    </audio></td>
+                    <td><audio controls="controls">
+                      <source
+                        src="static/audio/student_4_6.wav"
+                        autoplay />Your browser does not support the audio element.
+                    </audio></td>
+                    <td><audio controls="controls">
+                      <source
+                        src="static/audio/student_16_6.wav"
+                        autoplay />Your browser does not support the audio element.
+                    </audio></td>
+                    <td><audio controls="controls">
+                      <source
+                        src="static/audio/teacher_6.wav"
+                        autoplay />Your browser does not support the audio element.
+                    </audio></td>
+                </tr>
+              </tbody>
+            </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <br></br>
+
+
+        <br></br>
+        <h2 id="section_2">
+            Text-to-Sound Generation (1 step generation (NFE=1))
+            </h2>
+            <!-- <p><b>
+                <font color="061E61">Short Samples:</font>
+              </b></p> -->
+            <div class = "table-container">
+            <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
+              <thead>
+                <tr>
+                  <th scope="col" width="265px">Text prompts</th>
+                  <th scope="col" width="265px">SoundCTM</th>
+                  <th scope="col" width="265px"><a href="https://arxiv.org/pdf/2309.10740" target="_blank">ConsistencyTTA</a></th>
+                  <th scope="col" width="265px"><a href="https://arxiv.org/pdf/2309.10740" target="_blank">ConsistencyTTA-CLAP-FT</a></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>People are speaking as a vehicle goes by.</th>
+                    <td><audio controls="controls">
+                      <source
+                        src="static/audio/student_1_1.wav"
+                        autoplay />Your browser does not support the audio element.
+                    </audio></td>
+                    <td><audio controls="controls">
+                      <source
+                        src="static/audio/ctta_1.wav"
+                        autoplay />Your browser does not support the audio element.
+                    </audio></td>
+                    <td><audio controls="controls">
+                      <source
+                        src="static/audio/ctta_ft_1.wav"
+                        autoplay />Your browser does not support the audio element.
+                    </audio></td>
+                </tr>
+                <tr>
+                  <td>An adult male speaks while birds chirp, slight rustling and brief buzzing occur, and emergency vehicle sirens are blaring in the distance.</th>
+                    <td><audio controls="controls">
+                      <source
+                        src="static/audio/student_1_2.wav"
+                        autoplay />Your browser does not support the audio element.
+                    </audio></td>
+                    <td><audio controls="controls">
+                      <source
+                        src="static/audio/ctta_2.wav"
+                        autoplay />Your browser does not support the audio element.
+                    </audio></td>
+                    <td><audio controls="controls">
+                      <source
+                        src="static/audio/ctta_ft_2.wav"
+                        autoplay />Your browser does not support the audio element.
+                    </audio></td>
+                </tr>
+                <tr>
+                  <td>Wind is blowing along with some engines.</th>
+                    <td><audio controls="controls">
+                      <source
+                        src="static/audio/student_1_4.wav"
+                        autoplay />Your browser does not support the audio element.
+                    </audio></td>
+                    <td><audio controls="controls">
+                      <source
+                        src="static/audio/ctta_4.wav"
+                        autoplay />Your browser does not support the audio element.
+                    </audio></td>
+                    <td><audio controls="controls">
+                      <source
+                        src="static/audio/ctta_ft_4.wav"
+                        autoplay />Your browser does not support the audio element.
+                    </audio></td>
+                </tr>
+                <tr>
+                  <td>A man is speaking with crowd noise in the background.</th>
+                    <td><audio controls="controls">
+                      <source
+                        src="static/audio/student_1_7.wav"
+                        autoplay />Your browser does not support the audio element.
+                    </audio></td>
+                    <td><audio controls="controls">
+                      <source
+                        src="static/audio/ctta_7.wav"
+                        autoplay />Your browser does not support the audio element.
+                    </audio></td>
+                    <td><audio controls="controls">
+                      <source
+                        src="static/audio/ctta_ft_7.wav"
+                        autoplay />Your browser does not support the audio element.
+                    </audio></td>
+                </tr>
+                <tr>
+                  <td>A duck quacking.</th>
+                    <td><audio controls="controls">
+                      <source
+                        src="static/audio/student_1_8.wav"
+                        autoplay />Your browser does not support the audio element.
+                    </audio></td>
+                    <td><audio controls="controls">
+                      <source
+                        src="static/audio/ctta_8.wav"
+                        autoplay />Your browser does not support the audio element.
+                    </audio></td>
+                    <td><audio controls="controls">
+                      <source
+                        src="static/audio/ctta_ft_8.wav"
+                        autoplay />Your browser does not support the audio element.
+                    </audio></td>
+                </tr>
+              </tbody>
+            </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <br></br>
+
+        <br></br>
+        <h2 id="section_3">
+            Sound Intensity Control
+            </h2>
+            <!-- <p><b>
+                <font color="061E61">Short Samples:</font>
+              </b></p> -->
+            <div class = "table-container">
+            <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
+              <thead>
+                <tr>
+                  <th scope="col" width="265px">Text prompts and Target Intensity</th>
+                  <th scope="col" width="265px">Default Text-to-Sound Generation (16 steps)</th>
+                  <th scope="col" width="265px">z-T Optimization + 16-step Generation</th>
+                  <th scope="col" width="265px">Loss-based Guidance (16 steps)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>A child crying and a car door closing.
+                    <BR><img
+                      src="static/images/target_linear_down.png"
+                      alt="Features">
+                  </td>
+                  <td><audio controls="controls">
+                    <source
+                      src="static/audio/sound_intensity_demo_page/linear_down_default.wav"
+                      autoplay />Your browser does not support the audio element.
+                  </audio>
+                  <BR><img
+                    src="static/images/default_linear_down.png"
+                    alt="Features">
+                  </td>
+                  <td><audio controls="controls">
+                    <source
+                      src="static/audio/sound_intensity_demo_page/linear_down_optim.wav"
+                      autoplay />Your browser does not support the audio element.
+                  </audio>
+                  <BR><img
+                    src="static/images/optim_linear_down.png"
+                    alt="Features">
+                  </td>
+                  <td><audio controls="controls">
+                    <source
+                      src="static/audio/sound_intensity_demo_page/linear_down_guidance.wav"
+                      autoplay />Your browser does not support the audio element.
+                  </audio>
+                  <BR><img
+                    src="static/images/guidance_linear_down.png"
+                    alt="Features">
+                  </td>
+                </tr>
+                <tr>
+                  <td>Loud wind noise followed by a car accelerating fast.
+                    <BR><img
+                      src="static/images/target_linear_down_up.png"
+                      alt="Features">
+                  </td>
+                  <td><audio controls="controls">
+                    <source
+                      src="static/audio/sound_intensity_demo_page/linear_down_up_default.wav"
+                      autoplay />Your browser does not support the audio element.
+                  </audio>
+                  <BR><img
+                    src="static/images/default_linear_down_up.png"
+                    alt="Features">
+                  </td>
+                  <td><audio controls="controls">
+                    <source
+                      src="static/audio/sound_intensity_demo_page/linear_down_up_optim.wav"
+                      autoplay />Your browser does not support the audio element.
+                  </audio>
+                  <BR><img
+                    src="static/images/optim_linear_down_up.png"
+                    alt="Features">
+                  </td>
+                  <td><audio controls="controls">
+                    <source
+                      src="static/audio/sound_intensity_demo_page/linear_down_up_guidance.wav"
+                      autoplay />Your browser does not support the audio element.
+                  </audio>
+                  <BR><img
+                    src="static/images/guidance_linear_down_up.png"
+                    alt="Features">
+                  </td>
+                </tr>
+                <tr>
+                  <td>Ducks quacking and man speaking.
+                    <BR><img
+                      src="static/images/target_curve_down.png"
+                      alt="Features">
+                  </td>
+                  <td><audio controls="controls">
+                    <source
+                      src="static/audio/sound_intensity_demo_page/curve_down_default.wav"
+                      autoplay />Your browser does not support the audio element.
+                  </audio>
+                  <BR><img
+                    src="static/images/default_curve_down.png"
+                    alt="Features">
+                  </td>
+                  <td><audio controls="controls">
+                    <source
+                      src="static/audio/sound_intensity_demo_page/curve_down_optim.wav"
+                      autoplay />Your browser does not support the audio element.
+                  </audio>
+                  <BR><img
+                    src="static/images/optim_curve_down.png"
+                    alt="Features">
+                  </td>
+                  <td><audio controls="controls">
+                    <source
+                      src="static/audio/sound_intensity_demo_page/curve_down_guidance.wav"
+                      autoplay />Your browser does not support the audio element.
+                  </audio>
+                  <BR><img
+                    src="static/images/guidance_curve_down.png"
+                    alt="Features">
+                  </td>
+                </tr>
+                <tr>
+                  <td>A bell ringing repeatedly.
+                    <BR><img
+                      src="static/images/target_linear_up.png"
+                      alt="Features">
+                  </td>
+                  <td><audio controls="controls">
+                    <source
+                      src="static/audio/sound_intensity_demo_page/linear_up_default.wav"
+                      autoplay />Your browser does not support the audio element.
+                  </audio>
+                  <BR><img
+                    src="static/images/default_linear_up.png"
+                    alt="Features">
+                  </td>
+                  <td><audio controls="controls">
+                    <source
+                      src="static/audio/sound_intensity_demo_page/linear_up_optim.wav"
+                      autoplay />Your browser does not support the audio element.
+                  </audio>
+                  <BR><img
+                    src="static/images/optim_linear_up.png"
+                    alt="Features">
+                  </td>
+                  <td><audio controls="controls">
+                    <source
+                      src="static/audio/sound_intensity_demo_page/linear_up_guidance.wav"
+                      autoplay />Your browser does not support the audio element.
+                  </audio>
+                  <BR><img
+                    src="static/images/guidance_linear_up.png"
+                    alt="Features">
+                  </td>
+                </tr>
+                <tr>
+                  <td>Rain falls and a man speaks with distant thunder.
+                    <BR><img
+                      src="static/images/target_linear_up_down.png"
+                      alt="Features">
+                  </td>
+                  <td><audio controls="controls">
+                    <source
+                      src="static/audio/sound_intensity_demo_page/linear_up_down_default.wav"
+                      autoplay />Your browser does not support the audio element.
+                  </audio>
+                  <BR><img
+                    src="static/images/default_linear_up_down.png"
+                    alt="Features">
+                  </td>
+                  <td><audio controls="controls">
+                    <source
+                      src="static/audio/sound_intensity_demo_page/linear_up_down_optim.wav"
+                      autoplay />Your browser does not support the audio element.
+                  </audio>
+                  <BR><img
+                    src="static/images/optim_linear_up_down.png"
+                    alt="Features">
+                  </td>
+                  <td><audio controls="controls">
+                    <source
+                      src="static/audio/sound_intensity_demo_page/linear_up_down_guidance.wav"
+                      autoplay />Your browser does not support the audio element.
+                  </audio>
+                  <BR><img
+                    src="static/images/guidance_linear_up_down.png"
+                    alt="Features">
+                  </td>
+                </tr>
+                <tr>
+                  <td>Speech and then a pop and laughter.
+                    <BR><img
+                      src="static/images/target_curve_up.png"
+                      alt="Features">
+                  </td>
+                  <td><audio controls="controls">
+                    <source
+                      src="static/audio/sound_intensity_demo_page/curve_up_default.wav"
+                      autoplay />Your browser does not support the audio element.
+                  </audio>
+                  <BR><img
+                    src="static/images/default_curve_up.png"
+                    alt="Features">
+                  </td>
+                  <td><audio controls="controls">
+                    <source
+                      src="static/audio/sound_intensity_demo_page/curve_up_optim.wav"
+                      autoplay />Your browser does not support the audio element.
+                  </audio>
+                  <BR><img
+                    src="static/images/optim_curve_up.png"
+                    alt="Features">
+                  </td>
+                  <td><audio controls="controls">
+                    <source
+                      src="static/audio/sound_intensity_demo_page/curve_up_guidance.wav"
+                      autoplay />Your browser does not support the audio element.
+                  </audio>
+                  <BR><img
+                    src="static/images/guidance_curve_up.png"
+                    alt="Features">
+                  </td>
+                </tr>
+                
+
+
+
+
+
+
+              </tbody>
+            </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <br></br>
+
+
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{saito2024soundctm,
+        title={SoundCTM: Uniting Score-based and Consistency Models for Text-to-Sound Generation}, 
+        author={Koichi Saito and Dongjun Kim and Takashi Shibuya and Chieh-Hsin Lai and Zhi Zhong and Yuhta Takida and Yuki Mitsufuji},
+        journal={arXiv preprint arXiv:2405.18503},
+        year={2024}
+      }</code></pre>
+    </div>
+</section>
+
+<!--End BibTex citation -->
+
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
