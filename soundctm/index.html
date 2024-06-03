@@ -148,504 +148,183 @@
     </div>
   </div>
 </section>
+
 <!-- End paper abstract -->
 
 
-<br></br>
-        <h2 id="section_1">
-              Text-to-Sound Generation (various sampling steps)
-            </h2>
-            <!-- <p><b>
-                <font color="061E61">Short Samples:</font>
-              </b></p> -->
-            <div class = "table-container">
-            <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
-              <thead>
-                <tr>
-                  <th scope="col" width="265px">Text prompts</th>
-                  <th scope="col" width="265px">SoundCTM (1 step)</th>
-                  <th scope="col" width="265px">SoundCTM (4 steps)</th>
-                  <th scope="col" width="265px">SoundCTM (16 steps)</th>
-                  <th scope="col" width="265px"><a href="https://arxiv.org/pdf/2304.13731" target="_blank">TANGO (Teacher model)</a></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Frogs croaking and a humming with insects vocalizing.</th>
-                    <td><audio controls="controls">
-                      <source
-                        src="static/audio/student_1_3.wav"
-                        autoplay />Your browser does not support the audio element.
-                    </audio></td>
-                    <td><audio controls="controls">
-                      <source
-                        src="static/audio/student_4_3.wav"
-                        autoplay />Your browser does not support the audio element.
-                    </audio></td>
-                    <td><audio controls="controls">
-                      <source
-                        src="static/audio/student_16_3.wav"
-                        autoplay />Your browser does not support the audio element.
-                    </audio></td>
-                    <td><audio controls="controls">
-                      <source
-                        src="static/audio/teacher_3.wav"
-                        autoplay />Your browser does not support the audio element.
-                    </audio></td>
-                </tr>
-                <tr>
-                  <td>An adult male speaks while birds chirp, slight rustling and brief buzzing occur, and emergency vehicle sirens are blaring in the distance.</th>
-                    <td><audio controls="controls">
-                      <source
-                        src="static/audio/student_1_2.wav"
-                        autoplay />Your browser does not support the audio element.
-                    </audio></td>
-                    <td><audio controls="controls">
-                      <source
-                        src="static/audio/student_4_2.wav"
-                        autoplay />Your browser does not support the audio element.
-                    </audio></td>
-                    <td><audio controls="controls">
-                      <source
-                        src="static/audio/student_16_2.wav"
-                        autoplay />Your browser does not support the audio element.
-                    </audio></td>
-                    <td><audio controls="controls">
-                      <source
-                        src="static/audio/teacher_2.wav"
-                        autoplay />Your browser does not support the audio element.
-                    </audio></td>
-                </tr>
-                <tr>
-                  <td>A man speaks and then an audience claps.</th>
-                    <td><audio controls="controls">
-                      <source
-                        src="static/audio/student_1_9.wav"
-                        autoplay />Your browser does not support the audio element.
-                    </audio></td>
-                    <td><audio controls="controls">
-                      <source
-                        src="static/audio/student_4_9.wav"
-                        autoplay />Your browser does not support the audio element.
-                    </audio></td>
-                    <td><audio controls="controls">
-                      <source
-                        src="static/audio/student_16_9.wav"
-                        autoplay />Your browser does not support the audio element.
-                    </audio></td>
-                    <td><audio controls="controls">
-                      <source
-                        src="static/audio/teacher_9.wav"
-                        autoplay />Your browser does not support the audio element.
-                    </audio></td>
-                </tr>
-                <tr>
-                  <td>Loud explosions and bangs followed by men speaking.</th>
-                    <td><audio controls="controls">
-                      <source
-                        src="static/audio/student_1_5.wav"
-                        autoplay />Your browser does not support the audio element.
-                    </audio></td>
-                    <td><audio controls="controls">
-                      <source
-                        src="static/audio/student_4_5.wav"
-                        autoplay />Your browser does not support the audio element.
-                    </audio></td>
-                    <td><audio controls="controls">
-                      <source
-                        src="static/audio/student_16_5.wav"
-                        autoplay />Your browser does not support the audio element.
-                    </audio></td>
-                    <td><audio controls="controls">
-                      <source
-                        src="static/audio/teacher_5.wav"
-                        autoplay />Your browser does not support the audio element.
-                    </audio></td>
-                </tr>
-                <tr>
-                  <td>Ocean waves crashing as water trickles as gusts of wind blow and seagulls squawk in the distance.</th>
-                    <td><audio controls="controls">
-                      <source
-                        src="static/audio/student_1_6.wav"
-                        autoplay />Your browser does not support the audio element.
-                    </audio></td>
-                    <td><audio controls="controls">
-                      <source
-                        src="static/audio/student_4_6.wav"
-                        autoplay />Your browser does not support the audio element.
-                    </audio></td>
-                    <td><audio controls="controls">
-                      <source
-                        src="static/audio/student_16_6.wav"
-                        autoplay />Your browser does not support the audio element.
-                    </audio></td>
-                    <td><audio controls="controls">
-                      <source
-                        src="static/audio/teacher_6.wav"
-                        autoplay />Your browser does not support the audio element.
-                    </audio></td>
-                </tr>
-              </tbody>
-            </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-        <br></br>
+<section class="section hero">
+  <div class="container is-full-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-max-desktop is-full-mobile">
+        <h2 id="section_1" class="title is-3">Text-to-Sound Generation (various sampling steps)</h2>
+        <div class="table-container">
+          <table class="table" align="center" style="table-layout: fixed;word-break: break-word; width: 100%;">
+            <thead>
+              <tr>
+                <th scope="col" style="min-width: 200px;">Text prompts</th>
+                <th scope="col" style="min-width: 200px;">SoundCTM (1 step)</th>
+                <th scope="col" style="min-width: 200px;">SoundCTM (4 steps)</th>
+                <th scope="col" style="min-width: 200px;">SoundCTM (16 steps)</th>
+                <th scope="col" style="min-width: 200px;"><a href="https://arxiv.org/pdf/2304.13731" target="_blank">TANGO (Teacher model)</a></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Frogs croaking and a humming with insects vocalizing.</td>
+                <td><audio controls="controls"><source src="static/audio/student_1_3.wav" />Your browser does not support the audio element.</audio></td>
+                <td><audio controls="controls"><source src="static/audio/student_4_3.wav" />Your browser does not support the audio element.</audio></td>
+                <td><audio controls="controls"><source src="static/audio/student_16_3.wav" />Your browser does not support the audio element.</audio></td>
+                <td><audio controls="controls"><source src="static/audio/teacher_3.wav" />Your browser does not support the audio element.</audio></td>
+              </tr>
+              <tr>
+                <td>An adult male speaks while birds chirp, slight rustling and brief buzzing occur, and emergency vehicle sirens are blaring in the distance.</td>
+                <td><audio controls="controls"><source src="static/audio/student_1_2.wav" />Your browser does not support the audio element.</audio></td>
+                <td><audio controls="controls"><source src="static/audio/student_4_2.wav" />Your browser does not support the audio element.</audio></td>
+                <td><audio controls="controls"><source src="static/audio/student_16_2.wav" />Your browser does not support the audio element.</audio></td>
+                <td><audio controls="controls"><source src="static/audio/teacher_2.wav" />Your browser does not support the audio element.</audio></td>
+              </tr>
+              <tr>
+                <td>A man speaks and then an audience claps.</td>
+                <td><audio controls="controls"><source src="static/audio/student_1_9.wav" />Your browser does not support the audio element.</audio></td>
+                <td><audio controls="controls"><source src="static/audio/student_4_9.wav" />Your browser does not support the audio element.</audio></td>
+                <td><audio controls="controls"><source src="static/audio/student_16_9.wav" />Your browser does not support the audio element.</audio></td>
+                <td><audio controls="controls"><source src="static/audio/teacher_9.wav" />Your browser does not support the audio element.</audio></td>
+              </tr>
+              <tr>
+                <td>Loud explosions and bangs followed by men speaking.</td>
+                <td><audio controls="controls"><source src="static/audio/student_1_5.wav" />Your browser does not support the audio element.</audio></td>
+                <td><audio controls="controls"><source src="static/audio/student_4_5.wav" />Your browser does not support the audio element.</audio></td>
+                <td><audio controls="controls"><source src="static/audio/student_16_5.wav" />Your browser does not support the audio element.</audio></td>
+                <td><audio controls="controls"><source src="static/audio/teacher_5.wav" />Your browser does not support the audio element.</audio></td>
+              </tr>
+              <tr>
+                <td>Ocean waves crashing as water trickles as gusts of wind blow and seagulls squawk in the distance.</td>
+                <td><audio controls="controls"><source src="static/audio/student_1_6.wav" />Your browser does not support the audio element.</audio></td>
+                <td><audio controls="controls"><source src="static/audio/student_4_6.wav" />Your browser does not support the audio element.</audio></td>
+                <td><audio controls="controls"><source src="static/audio/student_16_6.wav" />Your browser does not support the audio element.</audio></td>
+                <td><audio controls="controls"><source src="static/audio/teacher_6.wav" />Your browser does not support the audio element.</audio></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<section class="section hero">
+  <div class="container is-full-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-max-desktop is-full-mobile">
+        <h2 id="section_2" class="title is-3">Text-to-Sound Generation (1 step generation (NFE=1))</h2>
+        <div class="table-container">
+          <table class="table" align="center" style="table-layout: fixed;word-break: break-word; width: 100%;">
+            <thead>
+              <tr>
+                <th scope="col" style="min-width: 200px;">Text prompts</th>
+                <th scope="col" style="min-width: 200px;">SoundCTM</th>
+                <th scope="col" style="min-width: 200px;"><a href="https://arxiv.org/pdf/2309.10740" target="_blank">ConsistencyTTA</a></th>
+                <th scope="col" style="min-width: 200px;"><a href="https://arxiv.org/pdf/2309.10740" target="_blank">ConsistencyTTA-CLAP-FT</a></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>People are speaking as a vehicle goes by.</td>
+                <td><audio controls="controls"><source src="static/audio/student_1_1.wav" />Your browser does not support the audio element.</audio></td>
+                <td><audio controls="controls"><source src="static/audio/ctta_1.wav" />Your browser does not support the audio element.</audio></td>
+                <td><audio controls="controls"><source src="static/audio/ctta_ft_1.wav" />Your browser does not support the audio element.</audio></td>
+              </tr>
+              <tr>
+                <td>An adult male speaks while birds chirp, slight rustling and brief buzzing occur, and emergency vehicle sirens are blaring in the distance.</td>
+                <td><audio controls="controls"><source src="static/audio/student_1_2.wav" />Your browser does not support the audio element.</audio></td>
+                <td><audio controls="controls"><source src="static/audio/ctta_2.wav" />Your browser does not support the audio element.</audio></td>
+                <td><audio controls="controls"><source src="static/audio/ctta_ft_2.wav" />Your browser does not support the audio element.</audio></td>
+              </tr>
+              <tr>
+                <td>Wind is blowing along with some engines.</td>
+                <td><audio controls="controls"><source src="static/audio/student_1_4.wav" />Your browser does not support the audio element.</audio></td>
+                <td><audio controls="controls"><source src="static/audio/ctta_4.wav" />Your browser does not support the audio element.</audio></td>
+                <td><audio controls="controls"><source src="static/audio/ctta_ft_4.wav" />Your browser does not support the audio element.</audio></td>
+              </tr>
+              <tr>
+                <td>A man is speaking with crowd noise in the background.</td>
+                <td><audio controls="controls"><source src="static/audio/student_1_7.wav" />Your browser does not support the audio element.</audio></td>
+                <td><audio controls="controls"><source src="static/audio/ctta_7.wav" />Your browser does not support the audio element.</audio></td>
+                <td><audio controls="controls"><source src="static/audio/ctta_ft_7.wav" />Your browser does not support the audio element.</audio></td>
+              </tr>
+              <tr>
+                <td>A duck quacking.</td>
+                <td><audio controls="controls"><source src="static/audio/student_1_8.wav" />Your browser does not support the audio element.</audio></td>
+                <td><audio controls="controls"><source src="static/audio/ctta_8.wav" />Your browser does not support the audio element.</audio></td>
+                <td><audio controls="controls"><source src="static/audio/ctta_ft_8.wav" />Your browser does not support the audio element.</audio></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <br></br>
-        <h2 id="section_2">
-            Text-to-Sound Generation (1 step generation (NFE=1))
-            </h2>
-            <!-- <p><b>
-                <font color="061E61">Short Samples:</font>
-              </b></p> -->
-            <div class = "table-container">
-            <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
-              <thead>
-                <tr>
-                  <th scope="col" width="265px">Text prompts</th>
-                  <th scope="col" width="265px">SoundCTM</th>
-                  <th scope="col" width="265px"><a href="https://arxiv.org/pdf/2309.10740" target="_blank">ConsistencyTTA</a></th>
-                  <th scope="col" width="265px"><a href="https://arxiv.org/pdf/2309.10740" target="_blank">ConsistencyTTA-CLAP-FT</a></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>People are speaking as a vehicle goes by.</th>
-                    <td><audio controls="controls">
-                      <source
-                        src="static/audio/student_1_1.wav"
-                        autoplay />Your browser does not support the audio element.
-                    </audio></td>
-                    <td><audio controls="controls">
-                      <source
-                        src="static/audio/ctta_1.wav"
-                        autoplay />Your browser does not support the audio element.
-                    </audio></td>
-                    <td><audio controls="controls">
-                      <source
-                        src="static/audio/ctta_ft_1.wav"
-                        autoplay />Your browser does not support the audio element.
-                    </audio></td>
-                </tr>
-                <tr>
-                  <td>An adult male speaks while birds chirp, slight rustling and brief buzzing occur, and emergency vehicle sirens are blaring in the distance.</th>
-                    <td><audio controls="controls">
-                      <source
-                        src="static/audio/student_1_2.wav"
-                        autoplay />Your browser does not support the audio element.
-                    </audio></td>
-                    <td><audio controls="controls">
-                      <source
-                        src="static/audio/ctta_2.wav"
-                        autoplay />Your browser does not support the audio element.
-                    </audio></td>
-                    <td><audio controls="controls">
-                      <source
-                        src="static/audio/ctta_ft_2.wav"
-                        autoplay />Your browser does not support the audio element.
-                    </audio></td>
-                </tr>
-                <tr>
-                  <td>Wind is blowing along with some engines.</th>
-                    <td><audio controls="controls">
-                      <source
-                        src="static/audio/student_1_4.wav"
-                        autoplay />Your browser does not support the audio element.
-                    </audio></td>
-                    <td><audio controls="controls">
-                      <source
-                        src="static/audio/ctta_4.wav"
-                        autoplay />Your browser does not support the audio element.
-                    </audio></td>
-                    <td><audio controls="controls">
-                      <source
-                        src="static/audio/ctta_ft_4.wav"
-                        autoplay />Your browser does not support the audio element.
-                    </audio></td>
-                </tr>
-                <tr>
-                  <td>A man is speaking with crowd noise in the background.</th>
-                    <td><audio controls="controls">
-                      <source
-                        src="static/audio/student_1_7.wav"
-                        autoplay />Your browser does not support the audio element.
-                    </audio></td>
-                    <td><audio controls="controls">
-                      <source
-                        src="static/audio/ctta_7.wav"
-                        autoplay />Your browser does not support the audio element.
-                    </audio></td>
-                    <td><audio controls="controls">
-                      <source
-                        src="static/audio/ctta_ft_7.wav"
-                        autoplay />Your browser does not support the audio element.
-                    </audio></td>
-                </tr>
-                <tr>
-                  <td>A duck quacking.</th>
-                    <td><audio controls="controls">
-                      <source
-                        src="static/audio/student_1_8.wav"
-                        autoplay />Your browser does not support the audio element.
-                    </audio></td>
-                    <td><audio controls="controls">
-                      <source
-                        src="static/audio/ctta_8.wav"
-                        autoplay />Your browser does not support the audio element.
-                    </audio></td>
-                    <td><audio controls="controls">
-                      <source
-                        src="static/audio/ctta_ft_8.wav"
-                        autoplay />Your browser does not support the audio element.
-                    </audio></td>
-                </tr>
-              </tbody>
-            </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-        <br></br>
-
-        <br></br>
-        <h2 id="section_3">
-            Sound Intensity Control
-            </h2>
-            <!-- <p><b>
-                <font color="061E61">Short Samples:</font>
-              </b></p> -->
-            <div class = "table-container">
-            <table class="table" align="center" style="table-layout: fixed;word-break:break-word">
-              <thead>
-                <tr>
-                  <th scope="col" width="265px">Text prompts and Target Intensity</th>
-                  <th scope="col" width="265px">Default Text-to-Sound Generation (16 steps)</th>
-                  <th scope="col" width="265px">z-T Optimization + 16-step Generation</th>
-                  <th scope="col" width="265px">Loss-based Guidance (16 steps)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>A child crying and a car door closing.
-                    <BR><img
-                      src="static/images/target_linear_down.png"
-                      alt="Features">
-                  </td>
-                  <td><audio controls="controls">
-                    <source
-                      src="static/audio/sound_intensity_demo_page/linear_down_default.wav"
-                      autoplay />Your browser does not support the audio element.
-                  </audio>
-                  <BR><img
-                    src="static/images/default_linear_down.png"
-                    alt="Features">
-                  </td>
-                  <td><audio controls="controls">
-                    <source
-                      src="static/audio/sound_intensity_demo_page/linear_down_optim.wav"
-                      autoplay />Your browser does not support the audio element.
-                  </audio>
-                  <BR><img
-                    src="static/images/optim_linear_down.png"
-                    alt="Features">
-                  </td>
-                  <td><audio controls="controls">
-                    <source
-                      src="static/audio/sound_intensity_demo_page/linear_down_guidance.wav"
-                      autoplay />Your browser does not support the audio element.
-                  </audio>
-                  <BR><img
-                    src="static/images/guidance_linear_down.png"
-                    alt="Features">
-                  </td>
-                </tr>
-                <tr>
-                  <td>Loud wind noise followed by a car accelerating fast.
-                    <BR><img
-                      src="static/images/target_linear_down_up.png"
-                      alt="Features">
-                  </td>
-                  <td><audio controls="controls">
-                    <source
-                      src="static/audio/sound_intensity_demo_page/linear_down_up_default.wav"
-                      autoplay />Your browser does not support the audio element.
-                  </audio>
-                  <BR><img
-                    src="static/images/default_linear_down_up.png"
-                    alt="Features">
-                  </td>
-                  <td><audio controls="controls">
-                    <source
-                      src="static/audio/sound_intensity_demo_page/linear_down_up_optim.wav"
-                      autoplay />Your browser does not support the audio element.
-                  </audio>
-                  <BR><img
-                    src="static/images/optim_linear_down_up.png"
-                    alt="Features">
-                  </td>
-                  <td><audio controls="controls">
-                    <source
-                      src="static/audio/sound_intensity_demo_page/linear_down_up_guidance.wav"
-                      autoplay />Your browser does not support the audio element.
-                  </audio>
-                  <BR><img
-                    src="static/images/guidance_linear_down_up.png"
-                    alt="Features">
-                  </td>
-                </tr>
-                <tr>
-                  <td>Ducks quacking and man speaking.
-                    <BR><img
-                      src="static/images/target_curve_down.png"
-                      alt="Features">
-                  </td>
-                  <td><audio controls="controls">
-                    <source
-                      src="static/audio/sound_intensity_demo_page/curve_down_default.wav"
-                      autoplay />Your browser does not support the audio element.
-                  </audio>
-                  <BR><img
-                    src="static/images/default_curve_down.png"
-                    alt="Features">
-                  </td>
-                  <td><audio controls="controls">
-                    <source
-                      src="static/audio/sound_intensity_demo_page/curve_down_optim.wav"
-                      autoplay />Your browser does not support the audio element.
-                  </audio>
-                  <BR><img
-                    src="static/images/optim_curve_down.png"
-                    alt="Features">
-                  </td>
-                  <td><audio controls="controls">
-                    <source
-                      src="static/audio/sound_intensity_demo_page/curve_down_guidance.wav"
-                      autoplay />Your browser does not support the audio element.
-                  </audio>
-                  <BR><img
-                    src="static/images/guidance_curve_down.png"
-                    alt="Features">
-                  </td>
-                </tr>
-                <tr>
-                  <td>A bell ringing repeatedly.
-                    <BR><img
-                      src="static/images/target_linear_up.png"
-                      alt="Features">
-                  </td>
-                  <td><audio controls="controls">
-                    <source
-                      src="static/audio/sound_intensity_demo_page/linear_up_default.wav"
-                      autoplay />Your browser does not support the audio element.
-                  </audio>
-                  <BR><img
-                    src="static/images/default_linear_up.png"
-                    alt="Features">
-                  </td>
-                  <td><audio controls="controls">
-                    <source
-                      src="static/audio/sound_intensity_demo_page/linear_up_optim.wav"
-                      autoplay />Your browser does not support the audio element.
-                  </audio>
-                  <BR><img
-                    src="static/images/optim_linear_up.png"
-                    alt="Features">
-                  </td>
-                  <td><audio controls="controls">
-                    <source
-                      src="static/audio/sound_intensity_demo_page/linear_up_guidance.wav"
-                      autoplay />Your browser does not support the audio element.
-                  </audio>
-                  <BR><img
-                    src="static/images/guidance_linear_up.png"
-                    alt="Features">
-                  </td>
-                </tr>
-                <tr>
-                  <td>Rain falls and a man speaks with distant thunder.
-                    <BR><img
-                      src="static/images/target_linear_up_down.png"
-                      alt="Features">
-                  </td>
-                  <td><audio controls="controls">
-                    <source
-                      src="static/audio/sound_intensity_demo_page/linear_up_down_default.wav"
-                      autoplay />Your browser does not support the audio element.
-                  </audio>
-                  <BR><img
-                    src="static/images/default_linear_up_down.png"
-                    alt="Features">
-                  </td>
-                  <td><audio controls="controls">
-                    <source
-                      src="static/audio/sound_intensity_demo_page/linear_up_down_optim.wav"
-                      autoplay />Your browser does not support the audio element.
-                  </audio>
-                  <BR><img
-                    src="static/images/optim_linear_up_down.png"
-                    alt="Features">
-                  </td>
-                  <td><audio controls="controls">
-                    <source
-                      src="static/audio/sound_intensity_demo_page/linear_up_down_guidance.wav"
-                      autoplay />Your browser does not support the audio element.
-                  </audio>
-                  <BR><img
-                    src="static/images/guidance_linear_up_down.png"
-                    alt="Features">
-                  </td>
-                </tr>
-                <tr>
-                  <td>Speech and then a pop and laughter.
-                    <BR><img
-                      src="static/images/target_curve_up.png"
-                      alt="Features">
-                  </td>
-                  <td><audio controls="controls">
-                    <source
-                      src="static/audio/sound_intensity_demo_page/curve_up_default.wav"
-                      autoplay />Your browser does not support the audio element.
-                  </audio>
-                  <BR><img
-                    src="static/images/default_curve_up.png"
-                    alt="Features">
-                  </td>
-                  <td><audio controls="controls">
-                    <source
-                      src="static/audio/sound_intensity_demo_page/curve_up_optim.wav"
-                      autoplay />Your browser does not support the audio element.
-                  </audio>
-                  <BR><img
-                    src="static/images/optim_curve_up.png"
-                    alt="Features">
-                  </td>
-                  <td><audio controls="controls">
-                    <source
-                      src="static/audio/sound_intensity_demo_page/curve_up_guidance.wav"
-                      autoplay />Your browser does not support the audio element.
-                  </audio>
-                  <BR><img
-                    src="static/images/guidance_curve_up.png"
-                    alt="Features">
-                  </td>
-                </tr>
-                
-
-
-
-
-
-
-              </tbody>
-            </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-        <br></br>
+<section class="section hero">
+  <div class="container is-full-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-max-desktop is-full-mobile">
+        <h2 id="section_3" class="title is-3">Sound Intensity Control</h2>
+        <div class="table-container">
+          <table class="table" align="center" style="table-layout: fixed;word-break: break-word; width: 100%;">
+            <thead>
+              <tr>
+                <th scope="col" style="min-width: 200px;">Text prompts and Target Intensity</th>
+                <th scope="col" style="min-width: 200px;">Default Text-to-Sound Generation (16 steps)</th>
+                <th scope="col" style="min-width: 200px;">z-T Optimization + 16-step Generation</th>
+                <th scope="col" style="min-width: 200px;">Loss-based Guidance (16 steps)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>A child crying and a car door closing.<br><img src="static/images/target_linear_down.png" alt="Features"></td>
+                <td><audio controls="controls"><source src="static/audio/sound_intensity_demo_page/linear_down_default.wav" />Your browser does not support the audio element.</audio><br><img src="static/images/default_linear_down.png" alt="Features"></td>
+                <td><audio controls="controls"><source src="static/audio/sound_intensity_demo_page/linear_down_optim.wav" />Your browser does not support the audio element.</audio><br><img src="static/images/optim_linear_down.png" alt="Features"></td>
+                <td><audio controls="controls"><source src="static/audio/sound_intensity_demo_page/linear_down_guidance.wav" />Your browser does not support the audio element.</audio><br><img src="static/images/guidance_linear_down.png" alt="Features"></td>
+              </tr>
+              <tr>
+                <td>Loud wind noise followed by a car accelerating fast.<br><img src="static/images/target_linear_down_up.png" alt="Features"></td>
+                <td><audio controls="controls"><source src="static/audio/sound_intensity_demo_page/linear_down_up_default.wav" />Your browser does not support the audio element.</audio><br><img src="static/images/default_linear_down_up.png" alt="Features"></td>
+                <td><audio controls="controls"><source src="static/audio/sound_intensity_demo_page/linear_down_up_optim.wav" />Your browser does not support the audio element.</audio><br><img src="static/images/optim_linear_down_up.png" alt="Features"></td>
+                <td><audio controls="controls"><source src="static/audio/sound_intensity_demo_page/linear_down_up_guidance.wav" />Your browser does not support the audio element.</audio><br><img src="static/images/guidance_linear_down_up.png" alt="Features"></td>
+              </tr>
+              <tr>
+                <td>Ducks quacking and man speaking.<br><img src="static/images/target_curve_down.png" alt="Features"></td>
+                <td><audio controls="controls"><source src="static/audio/sound_intensity_demo_page/curve_down_default.wav" />Your browser does not support the audio element.</audio><br><img src="static/images/default_curve_down.png" alt="Features"></td>
+                <td><audio controls="controls"><source src="static/audio/sound_intensity_demo_page/curve_down_optim.wav" />Your browser does not support the audio element.</audio><br><img src="static/images/optim_curve_down.png" alt="Features"></td>
+                <td><audio controls="controls"><source src="static/audio/sound_intensity_demo_page/curve_down_guidance.wav" />Your browser does not support the audio element.</audio><br><img src="static/images/guidance_curve_down.png" alt="Features"></td>
+              </tr>
+              <tr>
+                <td>A bell ringing repeatedly.<br><img src="static/images/target_linear_up.png" alt="Features"></td>
+                <td><audio controls="controls"><source src="static/audio/sound_intensity_demo_page/linear_up_default.wav" />Your browser does not support the audio element.</audio><br><img src="static/images/default_linear_up.png" alt="Features"></td>
+                <td><audio controls="controls"><source src="static/audio/sound_intensity_demo_page/linear_up_optim.wav" />Your browser does not support the audio element.</audio><br><img src="static/images/optim_linear_up.png" alt="Features"></td>
+                <td><audio controls="controls"><source src="static/audio/sound_intensity_demo_page/linear_up_guidance.wav" />Your browser does not support the audio element.</audio><br><img src="static/images/guidance_linear_up.png" alt="Features"></td>
+              </tr>
+              <tr>
+                <td>Rain falls and a man speaks with distant thunder.<br><img src="static/images/target_linear_up_down.png" alt="Features"></td>
+                <td><audio controls="controls"><source src="static/audio/sound_intensity_demo_page/linear_up_down_default.wav" />Your browser does not support the audio element.</audio><br><img src="static/images/default_linear_up_down.png" alt="Features"></td>
+                <td><audio controls="controls"><source src="static/audio/sound_intensity_demo_page/linear_up_down_optim.wav" />Your browser does not support the audio element.</audio><br><img src="static/images/optim_linear_up_down.png" alt="Features"></td>
+                <td><audio controls="controls"><source src="static/audio/sound_intensity_demo_page/linear_up_down_guidance.wav" />Your browser does not support the audio element.</audio><br><img src="static/images/guidance_linear_up_down.png" alt="Features"></td>
+              </tr>
+              <tr>
+                <td>Speech and then a pop and laughter.<br><img src="static/images/target_curve_up.png" alt="Features"></td>
+                <td><audio controls="controls"><source src="static/audio/sound_intensity_demo_page/curve_up_default.wav" />Your browser does not support the audio element.</audio><br><img src="static/images/default_curve_up.png" alt="Features"></td>
+                <td><audio controls="controls"><source src="static/audio/sound_intensity_demo_page/curve_up_optim.wav" />Your browser does not support the audio element.</audio><br><img src="static/images/optim_curve_up.png" alt="Features"></td>
+                <td><audio controls="controls"><source src="static/audio/sound_intensity_demo_page/curve_up_guidance.wav" />Your browser does not support the audio element.</audio><br><img src="static/images/guidance_curve_up.png" alt="Features"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
