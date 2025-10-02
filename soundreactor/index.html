@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  
+  <!-- Primary Meta Tags -->
+  <!-- TODO: Replace with your paper title and author names -->
+  <meta name="title" content="SoundReactor: Frame-level Online Video-to-Audio Generation">
+  <!-- TODO: Write a compelling 150-160 character description of your research -->
+  <meta name="description" content="We introduce the novel task of frame-level online video-to-audio generation and propose SoundReactor, which, to the best of our knowledge, is the first simple yet effective framework explicitly tailored for this task.">
+  <!-- TODO: Add 5-10 relevant keywords for your research area -->
+  <meta name="keywords" content="Frame-level online video-to-audio generation, video-to-audio generation">
+  <!-- TODO: List all authors -->
+  <meta name="author" content="Koichi Saito, Julian Tanke, Christian Simon, Masato Ishii, Kazuki Shimada, Zackary Novack, Zhi Zhong, Akio Hayakawa, Takashi Shibuya, Yuki Mitsufuji">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <!-- TODO: Replace with your institution or lab name -->
+  <meta property="og:site_name" content="Sony AI">
+  <!-- TODO: Same as paper title above -->
+  <meta property="og:title" content="SoundReactor: Frame-level Online Video-to-Audio Generation">
+  <!-- TODO: Same as description above -->
+  <meta property="og:description" content="We introduce the novel task of frame-level online video-to-audio generation and propose SoundReactor, which, to the best of our knowledge, is the first simple yet effective framework explicitly tailored for this task.">
+  <!-- TODO: Replace with your actual website URL -->
+  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
+  <!-- TODO: Create a 1200x630px preview image and update path -->
+  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="SoundReactor: Frame-level Online Video-to-Audio Generation">
+  <meta property="article:published_time" content="2025-10-05T00:00:00.000Z">
+  <meta property="article:author" content="Koichi Saito">
+  <meta property="article:section" content="Research">
+  <meta property="article:tag" content="Frame-level online video-to-audio generation">
+  <meta property="article:tag" content="video-to-audio generation">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- TODO: Replace with your lab/institution Twitter handle -->
+  <meta name="twitter:site" content="@SonyAI_global">
+  <!-- TODO: Replace with first author's Twitter handle -->
+  <meta name="twitter:creator" content="@Koichi__Saito">
+  <!-- TODO: Same as paper title above -->
+  <meta name="twitter:title" content="SoundReactor: Frame-level Online Video-to-Audio Generation">
+  <!-- TODO: Same as description above -->
+  <meta name="twitter:description" content=" We introduce the novel task of frame-level online video-to-audio generation and propose SoundReactor, which, to the best of our knowledge, is the first simple yet effective framework explicitly tailored for this task.">
+  <!-- TODO: Same as social preview image above -->
+  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta name="twitter:image:alt" content="SoundReactor: Frame-level Online Video-to-Audio Generation">
+
+  <!-- Academic/Research Specific -->
+  <meta name="citation_title" content="SoundReactor: Frame-level Online Video-to-Audio Generation">
+  <meta name="citation_author" content="Saito, Koichi">
+  <meta name="citation_author" content="Tanke, Julian">
+  <meta name="citation_publication_date" content="2025-10-05">
+  <meta name="citation_conference_title" content="CONFERENCE_NAME">
+  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
+  
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#2563eb">
+  <meta name="msapplication-TileColor" content="#2563eb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://ajax.googleapis.com">
+  <!-- <link rel="preconnect" href="https://documentcloud.adobe.com"> -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+
+  <!-- TODO: Replace with your paper title and authors -->
+  <title>SoundReactor</title>
+
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/x-icon" href="static/images/sr_favicon.png">
+  
+  <!-- Critical CSS - Load synchronously -->
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <!-- <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'/>"> -->
+  
+  <!-- Non-critical CSS - Load asynchronously -->
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  
+  <!-- Fallback for browsers that don't support preload -->
+  <noscript>
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+  
+  <!-- Fonts - Optimized loading -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  
+  <!-- Defer non-critical JavaScript -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <!-- Structured Data for Academic Papers -->
+   <script>
+        window.DEMO_DATA = [
+          {
+            title: "Sample 1",
+            files: [
+              {label: "Ground-truth", src: "static/videos/WeeWIjPb9nM_scene-195/gt.mp4"},
+              {label: "V-AURA", src: "static/videos/WeeWIjPb9nM_scene-195/vaura.mp4"},
+              {label: "Ours-Diffusion", src: "static/videos/WeeWIjPb9nM_scene-195/sr_diff.mp4"},
+              {label: "Ours-ECT (NFE=1)", src: "static/videos/WeeWIjPb9nM_scene-195/ect_1step.mp4"},
+              {label: "Ours-ECT (NFE=4)", src: "static/videos/WeeWIjPb9nM_scene-195/ect_4step.mp4"},
+            ]
+          },
+          {
+            title: "Sample 2",
+            files: [
+              {label: "Ground-truth", src: "static/videos/P8F7UBx5jXM_scene-202/gt.mp4"},
+              {label: "V-AURA", src: "static/videos/P8F7UBx5jXM_scene-202/vaura.mp4"},
+              {label: "Ours-Diffusion", src: "static/videos/P8F7UBx5jXM_scene-202/sr_diff.mp4"},
+              {label: "Ours-ECT (NFE=1)", src: "static/videos/P8F7UBx5jXM_scene-202/ect_1step.mp4"},
+              {label: "Ours-ECT (NFE=4)", src: "static/videos/P8F7UBx5jXM_scene-202/ect_4step.mp4"},
+            ]
+          },
+          {
+            title: "Sample 3",
+            files: [
+              {label: "Ground-truth", src: "static/videos/W2A_PcIhUVM_scene-149/gt.mp4"},
+              {label: "V-AURA", src: "static/videos/W2A_PcIhUVM_scene-149/vaura.mp4"},
+              {label: "Ours-Diffusion", src: "static/videos/W2A_PcIhUVM_scene-149/sr_diff.mp4"},
+              {label: "Ours-ECT (NFE=1)", src: "static/videos/W2A_PcIhUVM_scene-149/ect_1step.mp4"},
+              {label: "Ours-ECT (NFE=4)", src: "static/videos/W2A_PcIhUVM_scene-149/ect_4step.mp4"},
+            ]
+          },
+          {
+            title: "Sample 4",
+            files: [
+              {label: "Ground-truth", src: "static/videos/6rALm87VODU_scene-28/gt.mp4"},
+              {label: "V-AURA", src: "static/videos/6rALm87VODU_scene-28/vaura.mp4"},
+              {label: "Ours-Diffusion", src: "static/videos/6rALm87VODU_scene-28/sr_diff.mp4"},
+              {label: "Ours-ECT (NFE=1)", src: "static/videos/6rALm87VODU_scene-28/ect_1step.mp4"},
+              {label: "Ours-ECT (NFE=4)", src: "static/videos/6rALm87VODU_scene-28/ect_4step.mp4"},
+            ]
+          },
+          {
+            title: "Sample 5",
+            files: [
+              {label: "Ground-truth", src: "static/videos/XrIKxSm5EVI_scene-102/gt.mp4"},
+              {label: "V-AURA", src: "static/videos/XrIKxSm5EVI_scene-102/vaura.mp4"},
+              {label: "Ours-Diffusion", src: "static/videos/XrIKxSm5EVI_scene-102/sr_diff.mp4"},
+              {label: "Ours-ECT (NFE=1)", src: "static/videos/XrIKxSm5EVI_scene-102/ect_1step.mp4"},
+              {label: "Ours-ECT (NFE=4)", src: "static/videos/XrIKxSm5EVI_scene-102/ect_4step.mp4"},
+            ]
+          },
+          {
+            title: "Sample 6",
+            files: [
+              {label: "Ground-truth", src: "static/videos/5wUecxcGCGI_scene-1179/gt.mp4"},
+              {label: "V-AURA", src: "static/videos/5wUecxcGCGI_scene-1179/vaura.mp4"},
+              {label: "Ours-Diffusion", src: "static/videos/5wUecxcGCGI_scene-1179/sr_diff.mp4"},
+              {label: "Ours-ECT (NFE=1)", src: "static/videos/5wUecxcGCGI_scene-1179/ect_1step.mp4"},
+              {label: "Ours-ECT (NFE=4)", src: "static/videos/5wUecxcGCGI_scene-1179/ect_4step.mp4"},
+            ]
+          },
+          {
+            title: "Sample 7",
+            files: [
+              {label: "Ground-truth", src: "static/videos/4keUlXV_z5w_scene-147/gt.mp4"},
+              {label: "V-AURA", src: "static/videos/4keUlXV_z5w_scene-147/vaura.mp4"},
+              {label: "Ours-Diffusion", src: "static/videos/4keUlXV_z5w_scene-147/sr_diff.mp4"},
+              {label: "Ours-ECT (NFE=1)", src: "static/videos/4keUlXV_z5w_scene-147/ect_1step.mp4"},
+              {label: "Ours-ECT (NFE=4)", src: "static/videos/4keUlXV_z5w_scene-147/ect_4step.mp4"},
+            ]
+          },
+          {
+            title: "Sample 8",
+            files: [
+              {label: "Ground-truth", src: "static/videos/4I1MBmrGloU_scene-29/gt.mp4"},
+              {label: "V-AURA", src: "static/videos/4I1MBmrGloU_scene-29/vaura.mp4"},
+              {label: "Ours-Diffusion", src: "static/videos/4I1MBmrGloU_scene-29/sr_diff.mp4"},
+              {label: "Ours-ECT (NFE=1)", src: "static/videos/4I1MBmrGloU_scene-29/ect_1step.mp4"},
+              {label: "Ours-ECT (NFE=4)", src: "static/videos/4I1MBmrGloU_scene-29/ect_4step.mp4"},
+            ]
+          },
+        ];
+    </script>
+    <!-- MathJax v3: enable inline/display math and a few handy macros -->
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']],
+      packages: {'[+]': ['ams']},
+      macros: {
+        vec: ['{\\mathbf{#1}}', 1],   // \vec{x} -> \mathbf{x}
+        bm:  ['{\\boldsymbol{#1}}',1],// \bm{\mu}  -> bold Greek, symbols
+        R:   '\\mathbb{R}'            // \R      -> ℝ
+      }
+    },
+    options: {
+      skipHtmlTags: ['script','noscript','style','textarea','pre','code'] // don't parse code blocks
+    }
+  };
+</script>
+<script defer id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+  <script defer src="static/js/index.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "SoundReactor: Frame-level Online Video-to-Audio Generation",
+    "description": "We introduce the novel task of frame-level online video-to-audio generation and propose SoundReactor, which, to the best of our knowledge, is the first simple yet effective framework explicitly tailored for this task.",
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Koichi Saito",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Sony AI"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Julian Tanke",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Sony AI"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Christian Simon",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Sony Group Corporation"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Masato Ishii",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Sony AI"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Kazuki Shimada",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Sony AI"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Zackary Novack",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "UC-San Diego"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Zhi Zhong",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Sony Group Corporation"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Akio Hayakawa",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Sony AI"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Takashi Shibuya",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Sony AI"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Yuki Mitsufuji",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Sony AI, Sony Group Corporation"
+        }
+      }
+    ],
+    "datePublished": "2025-10-05",
+    "publisher": {
+      "@type": "Organization",
+      "name": "arXiv"
+    },
+    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
+    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
+    "keywords": ["Frame-level online video-to-audio generation", "video-to-audio generation", "autoregressive models", "diffusion models", "multimodal generative modeling for sound and audio", "machine learning", "deep learning"],
+    "isAccessibleForFree": true,
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "mainEntity": {
+      "@type": "WebPage",
+      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "Frame-level online video-to-audio generation"
+      },
+      {
+        "@type": "Thing", 
+        "name": "video-to-audio generation"
+      },
+      {
+        "@type": "Thing", 
+        "name": "autoregressive models"
+      },
+      {
+        "@type": "Thing", 
+        "name": "diffusion models"
+      },
+      {
+        "@type": "Thing", 
+        "name": "multimodal generative modeling for sound and audio"
+      },
+      {
+        "@type": "Thing", 
+        "name": "machine learning"
+      },
+      {
+        "@type": "Thing", 
+        "name": "deep learning"
+      }
+    ]
+  }
+  </script>
+  
+  <!-- Website/Organization Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Sony AI",
+    "url": "https://www.ai.sony/",
+    "sameAs": [
+      "https://x.com/SonyAI_global",
+      "https://github.com/sony"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- More Works Dropdown -->
+  <!-- <div class="more-works-container"> -->
+    <!-- <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
+      <i class="fas fa-flask"></i>
+      More Works
+      <i class="fas fa-chevron-down dropdown-arrow"></i>
+    </button> -->
+    <!-- <div class="more-works-dropdown" id="moreWorksDropdown">
+      <div class="dropdown-header">
+        <h4>More Works from Our Lab</h4>
+        <button class="close-btn" onclick="toggleMoreWorks()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div> -->
+      <!-- <div class="works-list"> -->
+        <!-- TODO: Replace with your lab's related works -->
+        <!-- <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
+          <div class="work-info"> -->
+            <!-- TODO: Replace with actual paper title -->
+            <!-- <h5>Paper Title 1</h5> -->
+            <!-- TODO: Replace with brief description -->
+            <!-- <p>Brief description of the work and its main contribution.</p> -->
+            <!-- TODO: Replace with venue and year -->
+            <!-- <span class="work-venue">Conference/Journal 2024</span> -->
+          <!-- </div>
+          <i class="fas fa-external-link-alt"></i>
+        </a> -->
+        <!-- TODO: Add more related works or remove extra items -->
+        <!-- <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
+          <div class="work-info">
+            <h5>Paper Title 2</h5>
+            <p>Brief description of the work and its main contribution.</p>
+            <span class="work-venue">Conference/Journal 2023</span>
+          </div>
+          <i class="fas fa-external-link-alt"></i>
+        </a> -->
+        <!-- <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
+          <div class="work-info">
+            <h5>Paper Title 3</h5>
+            <p>Brief description of the work and its main contribution.</p>
+            <span class="work-venue">Conference/Journal 2023</span>
+          </div>
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+      </div>
+    </div>
+  </div> -->
+
+  <main id="main-content">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <!-- TODO: Replace with your paper title -->
+            <h1 class="title is-1 publication-title">SoundReactor: Frame-level Online Video-to-Audio Generation</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><a href="https://scholar.google.com/citations?user=UT-g5BAAAAAJ" target="_blank">Koichi Saito</a><sup>1,†</sup>,</span>
+              <span class="author-block"><a href="https://scholar.google.com/citations?user=eVHCoTsAAAAJ" target="_blank">Julian Tanke</a><sup>1</sup>,</span>
+              <span class="author-block"><a href="https://chrysts.github.io/" target="_blank">Christian Simon</a><sup>2</sup>,</span>
+              <span class="author-block"><a href="https://scholar.google.co.jp/citations?user=RRIO1CcAAAAJ" target="_blank">Masato Ishii</a><sup>1</sup>,</span>
+              <span class="author-block"><a href="https://scholar.google.co.jp/citations?user=-t9IslAAAAAJ" target="_blank">Kazuki Shimada</a><sup>1</sup>,</span>
+              <span class="author-block"><a href="https://zacharynovack.github.io/" target="_blank">Zachary Novack</a><sup>3</sup>,</span>
+              <span class="author-block"><a href="https://scholar.google.co.jp/citations?user=iRVT3A8AAAAJ" target="_blank">Zhi Zhong</a><sup>2</sup>,</span>
+              <span class="author-block"><a href="https://scholar.google.com/citations?user=sXAjHFIAAAAJ" target="_blank">Akio Hayakawa</a><sup>1</sup>,</span>
+              <span class="author-block"><a href="https://scholar.google.com/citations?user=XCRO260AAAAJ" target="_blank">Takashi Shibuya</a><sup>1</sup>,</span>
+              <span class="author-block"><a href="https://www.yukimitsufuji.com/" target="_blank">Yuki Mitsufuji</a><sup>1, 2</sup></span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Sony AI, <sup>2</sup>Sony Group Corporation, <sup>3</sup>UC-San Diego</span>
+              <span class="eql-cntrb"><small><br><sup>†</sup>Project lead</small>, 
+                <a href="mailto:Koichi.Saito@sony.com" class="email-link" aria-label="Email Koichi Saito"><i class="fas fa-envelope"></i> Koichi Saito</a>
+              </span>
+            </div>
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- arXiv PDF
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2501.01234.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span>Paper (arXiv PDF)</span>
+                  </a>
+                </span> -->
+                <!-- arXiv abstract -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="ai ai-arxiv"></i></span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                    <a
+                      class="external-link button is-normal is-rounded is-dark is-disabled"
+                      aria-disabled="true" role="link" tabindex="-1" title="Coming soon">
+                      <span class="icon"><i class="fab fa-github"></i></span>
+                      <span>Code (Stay tuned)</span>
+                    </a>
+                </span>
+              </div>
+            </div>
+                <!-- <span class="author-block">
+                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <span class="author-block">
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                  </span>
+                  </div> -->
+
+                  <!-- <div class="is-size-5 publication-authors"> -->
+                    <!-- TODO: Replace with your institution and conference/journal info -->
+                    <!-- <span class="author-block">Institution Name<br>Conference name and year</span> -->
+                    <!-- TODO: Remove this line if no equal contribution -->
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+                  <!-- </div> -->
+
+                  <!-- <div class="column has-text-centered">
+                    <div class="publication-links">
+                         TODO: Update with your arXiv paper ID
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span> -->
+
+                    <!-- TODO: Add your supplementary material PDF or remove this section -->
+                    <!-- <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span> -->
+
+                  <!-- TODO: Replace with your GitHub repository URL -->
+
+                <!-- TODO: Update with your arXiv paper ID -->
+                <!-- <span class="link-block">
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span> -->
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body"> -->
+      <!-- TODO: Replace with your teaser video -->
+      <!-- <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata"> -->
+        <!-- TODO: Add your video file path here -->
+        <!-- <source src="static/videos/banner_video.mp4" type="video/mp4"> -->
+      <!-- </video> -->
+      <!-- TODO: Replace with your video description -->
+      <!-- <h2 class="subtitle has-text-centered">
+        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+      </h2>
+    </div>
+  </div>
+</section> -->
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Prevailing Video-to-Audio (V2A) generation models operate offline, assuming an entire video sequence or chunks of frames are available beforehand.
+            This critically limits their use in interactive applications such as live content creation and emerging generative world models. 
+            To address this gap, we introduce the novel task of frame-level online V2A generation, where a model autoregressively generates audio from video without access to future video frames.
+            Furthermore, we propose SoundReactor, which, to the best of our knowledge, is the first simple yet effective framework explicitly tailored for this task.
+            Our design enforces end-to-end causality and targets low per-frame latency with audio-visual synchronization.
+            Our model's backbone is a decoder-only causal transformer over continuous audio latents.
+            For vision conditioning, it leverages grid (patch) features extracted from the smallest variant of the DINOv2 vision encoder, which are aggregated into a single token per frame to maintain end-to-end causality and efficiency. 
+            The model is trained through a diffusion pre-training followed by consistency fine-tuning to accelerate the diffusion head decoding.
+            On a benchmark of diverse gameplay videos from AAA titles, our model successfully generates semantically and temporally aligned, high-quality full-band stereo audio, validated by both objective and human evaluations.
+            Furthermore, our model achieves low per-frame waveform-level latency (26.3ms with the head NFE=1, 31.5ms with NFE=4) on 30FPS, 480p videos using a single H100.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+<!-- -->
+
+<!-- Figures (Carousel) -->
+<section class="section" id="figures">
+  <div class="container is-max-fullhd">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-12">
+
+        <h2 class="title is-3">Our Scope and Framework</h2>
+
+        <div id="fig-carousel"
+             class="carousel fig-carousel"
+             data-navigation="true"
+             data-pagination="true"> 
+
+          <!-- Slide 1 -->
+          <div class="item">
+            <figure class="png-figure no-max">
+              <img src="static/images/nse_task_def_horizon.png"
+                   alt="Model overview of the frame-level online V2A pipeline"
+                   loading="lazy">
+              <figcaption>
+                <span class="fig-title">Figure 1.</span>
+                Our scope is the frame-level online video-to-audio (V2A) generation task,
+                <strong>where future video frames are not available in advance.</strong><br>
+                This contrasts with conventional offline V2A, where an entire sequence or chunks of frames are available in advance.
+              </figcaption>
+            </figure>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="item">
+            <figure class="png-figure no-max">
+              <img src="static/images/nse_overview.png"
+                   alt="SoundReactor overview"
+                   loading="lazy">
+              <figcaption>
+                <span class="fig-title">Figure 2.</span>
+                Overview of SoundReactor with three components:<br>
+                (a) Video token modeling, (b) Audio token modeling, (c) Multimodal AR transformer with diffusion/ECT head.
+              </figcaption>
+            </figure>
+          </div>
+
+        </div><!-- /#fig-carousel -->
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Demo Samples -->
+<section class="section hero is-light" id="demo-samples">
+  <div class="container is-max-fullhd">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-12">
+
+        <h2 class="title is-3">Demo Samples on OGameData<sup id="fn-1"><a class="ref" href="#ref-1">[1]</a></sup></h2>
+        <p class="subtitle is-5 has-text-weight-semibold" style="margin-bottom:1rem">
+          All models are trained on OGameData dataset. <br>
+          V-AURA<sup id="fn-2"><a class="ref" href="#ref-2">[2],</a></sup><sup id="fnref-vaura"><a class="fn" href="#fn-vaura" aria-label="Footnote: V-AURA">†</a></sup> , the baseline, is the state-of-the-art offline AR V2A model. <br>
+          To our best knowledge, our models are the first frame-level online V2A models.<br>
+          Among our models, Ours-ECT (NFE=4) performs the best.
+        </p>
+
+        <div id="demo-grid"></div>
+        <p id="fn-vaura" class="demo-note" role="note">
+          <span class="demo-note-mark">†</span>
+          Although V-AURA is the most analogous model to our setup, it is not directly applicable to the
+          <strong>frame-level</strong> online V2A task (see the manuscript for details).
+          <a class="fn-back" href="#fnref-vaura" aria-label="Back to text">↩︎</a>
+        </p>
+
+        <div class="has-text-centered" style="margin-top:2rem">
+          <a class="button is-small is-dark is-rounded" href="more.html">More samples →</a>
+        </div>
+
+      </div> <!-- /.column -->
+    </div>   <!-- /.columns -->
+  </div>     <!-- /.container -->
+</section>
+
+<!-- Training, Sampling, and Latency (Carousel) -->
+<section class="section" id="figures-training">
+  <div class="container is-max-fullhd">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-12">
+        <h2 class="title is-3">Training, Sampling, and Latency</h2>
+
+        <div id="fig-carousel-2" class="carousel fig-carousel" data-navigation="true" data-pagination="true">
+          <div class="item">
+            <figure class="png-figure no-max">
+              <img src="static/images/soundreactor_stage1_training.jpg" alt="Training Stage 1" loading="lazy">
+              <figcaption>Stage 1 training: Diffusion pre-training. $\vec{x}^{0}_{i}$ and $\vec{v}_{i}$ are continuous audio and video latents, respectively.
+                $F_{\bm{\phi}}$ and $D_{\bm{\theta}}$ are transformer and diffusion head, respectively.
+              </figcaption>
+            </figure>
+          </div>
+          <div class="item">
+            <figure class="png-figure no-max">
+              <img src="static/images/soundreactor_stage2_training.jpg" alt="Training Stage 2" loading="lazy">
+              <figcaption>Stage 2 training: Consistency fine-tuning.  $\vec{x}^{0}_{i}$ and $\vec{v}_{i}$ are continuous audio and video latents, respectively.
+                $F_{\bm{\phi}}$ and $D_{\bm{\theta}}$ are transformer and diffusion head, respectively.
+              </figcaption>
+            </figure>
+          </div>
+          <div class="item">
+            <figure class="png-figure no-max">
+              <img src="static/images/soundreactor_sampling.jpg" alt="Sampling Scheme" loading="lazy">
+              <figcaption>Sampling scheme</figcaption>
+            </figure>
+          </div>
+          <div class="item">
+            <figure class="png-figure no-max">
+              <img src="static/images/latency.jpg" alt="Latency Breakdown" loading="lazy">
+              <figcaption>Per-frame latency. Waveform-level latency is the elapsed time from feeding the previous audio token $\vec{x}_{i-1}$ into the model until the output $\vec{x}_{i}$ is incrementally decoded into a waveform, including the encoding of a raw video frame $V_{i}$. Token‑level latency is identical to this but excludes the waveform decoding. 
+                Benchmark is done on a single H100 GPU with a batch size of one, using a single CUDA stream measured on 30FPS, 480p videos with the default Ours-ECT at $\omega=3$.</figcaption>
+            </figure>
+          </div>
+        </div><!-- /#fig-carousel-2 -->
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Image carousel -->
+<!-- <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item"> -->
+        <!-- TODO: Replace with your research result images -->
+        <!-- <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/> -->
+        <!-- TODO: Replace with description of this result -->
+        <!-- <h2 class="subtitle has-text-centered"> -->
+          <!-- First image description.
+        </h2>
+      </div>
+      <div class="item"> -->
+        <!-- Your image here -->
+        <!-- <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
+        <h2 class="subtitle has-text-centered">
+          Second image description.
+        </h2>
+      </div>
+      <div class="item"> -->
+        <!-- Your image here -->
+        <!-- <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
+        <h2 class="subtitle has-text-centered">
+         Third image description.
+       </h2>
+     </div>
+     <div class="item"> -->
+      <!-- Your image here -->
+      <!-- <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
+      <h2 class="subtitle has-text-centered">
+        Fourth image description.
+      </h2>
+    </div>
+  </div>
+</div>
+</div>
+</section> -->
+<!-- End image carousel -->
+
+
+
+
+<!-- Youtube video -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container"> -->
+      <!-- Paper video. -->
+      <!-- <h2 class="title is-3">Video Presentation</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths"> -->
+          
+          <!-- <div class="publication-video"> -->
+            <!-- TODO: Replace with your YouTube video ID -->
+            <!-- <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- End youtube video -->
+
+
+<!-- Video carousel -->
+<!-- <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Another Carousel</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1"> -->
+          <!-- TODO: Add poster image for better preview -->
+          <!-- <video poster="" id="video1" controls muted loop height="100%" preload="metadata"> -->
+            <!-- Your video file here -->
+            <!-- <source src="static/videos/carousel1.mp4" type="video/mp4"> -->
+          <!-- </video>
+        </div> -->
+        <!-- <div class="item item-video2"> -->
+          <!-- TODO: Add poster image for better preview -->
+          <!-- <video poster="" id="video2" controls muted loop height="100%" preload="metadata"> -->
+            <!-- Your video file here -->
+            <!-- <source src="static/videos/carousel2.mp4" type="video/mp4"> -->
+          <!-- </video>
+        </div>
+        <div class="item item-video3"> -->
+          <!-- TODO: Add poster image for better preview -->
+          <!-- <video poster="" id="video3" controls muted loop height="100%" preload="metadata"> -->
+            <!-- Your video file here -->
+            <!-- <source src="static/videos/carousel3.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- End video carousel -->
+
+
+
+
+
+
+<!-- Paper poster -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Poster</h2> -->
+
+      <!-- TODO: Replace with your poster PDF -->
+      <!-- <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+          </iframe>
+        
+      </div>
+    </div>
+  </section> -->
+<!--End paper poster -->
+
+
+
+<!-- BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="bibtex-header">
+        <h2 class="title">BibTeX</h2>
+        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+          <i class="fas fa-copy"></i>
+          <span class="copy-text">Copy</span>
+        </button>
+      </div>
+      <pre id="bibtex-code"><code>@article{Saito2025SoundReactor,
+  title={SoundReactor: Frame-level Online Video-to-Audio Generation},
+  author={Koichi Saito and Julian Tanke and Christian Simon and Masato Ishii and Kazuki Shimada and Zachary Novack and Zhi Zhong and Akio Hayakawa and Takashi Shibuya and Yuki Mitsufuji},
+  year={2025},
+  eprint={ss},
+  archivePrefix={arXiv},
+  primaryClass={cs.SD},
+  journal={arXiv preprint arXiv:},
+  url={https://arxiv.org/abs/},
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+<!-- References -->
+<section class="section" id="references">
+  <div class="container is-max-desktop">
+    <h2 class="title is-4">References</h2>
+    <ol class="ref-list">
+      <li id="ref-1">
+        H. Che, X. He, Q. Liu, C. Jin and H. Chen, "Gamegen-x: Interactive open-world game video generation," ICLR 2025
+        <!-- <a href="#fn-1" class="back-link" aria-label="Back to citation">↩︎</a> -->
+      </li>
+      <li id="ref-2">
+        I. Viertola, V. Iashin and E. Rahtu, "Temporally Aligned Audio for Video with Autoregression," ICASSP 2025
+        <!-- <a href="#fn-1" class="back-link" aria-label="Back to citation">↩︎</a> -->
+      </li>
+    </ol>
+  </div>
+</section>
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
